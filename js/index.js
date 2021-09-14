@@ -31,7 +31,8 @@ const displayPhotographer = (ArrayOfPhotographer) => {
 
 // Filtre les photographes par tags
 
-const filterTag
+const filterTag = () => 
+    getElementById
 
 // récupérer fichier JSON
 
