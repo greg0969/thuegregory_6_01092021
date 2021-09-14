@@ -1,0 +1,41 @@
+body {
+    align-self: center;
+    max-width: 1440px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.625rem;
+    line-height: 1rem;
+  }
+  
+  h1 {
+    font-size: 2.25rem;
+    line-height: 2.87rem;
+    color: #901c1c;
+    margin-left: 1%;
+  }
+  
+  h2 {
+    font-size: 2.25rem;
+    line-height: 2.87rem;
+    color: #d3573c;
+  }
+  
+  h3 {
+    font-size: 0.81rem;
+    line-height: 1rem;
+    margin-bottom: 3px;
+    color: #901c1c;
+  }
+  
+  p {
+    font-size: 0.63rem;
+    line-height: 0.81rem;
+  }
+  
+  a {
+    font-size: 0.75rem;
+    line-height: 0.94rem;
+    font-weight: 500;
+    font-family: "DM Sans", sans-serif;
+    color: #901c1c;
+    text-decoration: none;
+  }

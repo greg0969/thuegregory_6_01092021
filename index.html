@@ -1,42 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fisheye</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <script src="script/script.js" ></script>
-    <script src="script/photographer.js" ></script>
-    <script src="script/media.js" ></script>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
-      href="https://fonts.googleapis.com/css?family=DM+Sans"
-      rel="stylesheet"
-    />
+      href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap"rel="stylesheet"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap"rel="stylesheet"/>
+    <link rel="stylesheet" href="public/css/style.css" />
   </head>
-  <header class="banner" role="banner" aria-label="banner">
-      <div class="logo">
-          <a href="index.html"><img src="logo.png" alt="Fisheye Home page"></a>
-      </div>
-      <a href="index.html"><span class="main-link">Passer au contenu</span></a>
-    <nav class="main-nav" aria-label="photographer categories">
-      
-      <a href=""><span class="tags">#Portrait</span></a>
-      <a href=""><span class="tags">#Art</span></a>
-      <a href=""><span class="tags">#Fashion</span></a>
-      <a href=""><span class="tags">#Architecture</span></a>
-      <a href=""><span class="tags">#Travel</span></a>
-      <a href=""><span class="tags">#Sport</span></a>
-      <a href=""><span class="tags">#Animals</span></a>
-      <a href=""><span class="tags">#Events</span></a>
-    </nav>  
-  </header>
-  <main>
-    <h1>Nos photographes</h1>
-    <section class="photographers">
-      
-    </section>
-  </main>
-  <footer>
-    
-  </footer>
+
+  <body>
+    <header class="header">
+      <a href="index.html" class="logo">
+        <img src="public/images/logo/logo.png" alt="Logo Fisheye" />
+      </a>
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__list__link"><button class="tags" tag="portrait">#Portrait</button></li>
+          <li class="main-nav__list__link"><button class="tags" tag="art">#Art</button></li>
+          <li class="main-nav__list__link"><button class="tags" tag="fashion">#Fashion</button></li>
+          <li class="main-nav__list__link"><button class="tags" tag="architecture">#Architecture</button></li>
+          <li class="main-nav__list__link"><button class="tags" tag="travel">#Travel</button></li>
+          <li class="main-nav__list__link"><button class="tags" tag="sport">#Sport</button></li>
+          <li class="main-nav__list__link"><button class="tags" tag="animals">#Animals</button></li>
+          <li class="main-nav__list__link"><button class="tags" tag="events">#Events</button></li>
+        </ul>
+      </nav>
+
+      <button class="passer-au-contenu"><a href="#main">Passer au contenu</a></button>  
+      <h1 class="title">Nos Photographes</h1>
+    </header>
+
+    <main class="main" id="main">
+     
+    </main>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "p6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass ./sass/style.scss:./public/css/style.css --watch --no-source-map --style expanded"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/greg0969/thuegregory_6_01092021"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/greg0969/thuegregory_6_01092021/issues"
+  },
+  "homepage": "https://github.com/greg0969/thuegregory_6_01092021#readme"
+}
+
