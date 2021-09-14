@@ -25,15 +25,16 @@
       }
     }
     .passer-au-contenu {
-      display: none;
+      display: none; 
       position: fixed;
       top: 1%;
       left: 50%;
       transform: translateX(-50%);
-      height: 1.88rem;
-      width: 11.38rem;
+      width: 15%;
       background-color: #db8876;
       border-radius: 10px;
+      padding: 0.5%;
+      text-align: center;
       a {
         font-size: 1.19rem;
         font-weight: 700;

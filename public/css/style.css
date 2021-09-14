@@ -40,7 +40,7 @@ a {
   text-decoration: none;
 }
 
-button {
+.tag-style {
   font-size: 0.75rem;
   line-height: 0.94rem;
   font-weight: 500;
@@ -82,10 +82,11 @@ button {
   top: 1%;
   left: 50%;
   transform: translateX(-50%);
-  height: 1.88rem;
-  width: 11.38rem;
+  width: 15%;
   background-color: #db8876;
   border-radius: 10px;
+  padding: 0.5%;
+  text-align: center;
 }
 .header .passer-au-contenu a {
   font-size: 1.19rem;
@@ -138,12 +139,9 @@ button {
   color: #c4c4c4;
   font-size: 0.56rem;
 }
-.card__content__link {
+.card__content div__tag {
   display: flex;
   justify-content: center;
-}
-
-.card__link button {
   border: solid 0.5px #c4c4c4;
   border-radius: 11px;
   margin: auto 5px;

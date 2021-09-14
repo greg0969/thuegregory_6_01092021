@@ -3,18 +3,19 @@
 //DOM
 
 
-const passerAuContenu = document.querySelector(".passer-au-contenu");
+
 
 // faire apparaitre "passer au contenu" au scroll
 
 const displayPasserAuContenu = () => {
     window.addEventListener("scoll",() => {
+        const passerAuContenu = document.querySelector(".passer-au-contenu");
         const scrolled = window.scrollY;
-        if (scrolled >= 30) {
-            passerAuContenu.getElementsByClassName.display = "block";
+        if (scrolled > 50) {
+            passerAuContenu.style.display = "block";
         }
         else {
-            passerAuContenu.getElementsByClassName.display = "none";
+            passerAuContenu.style.display = "none";
         }
     });
 };
@@ -31,8 +32,20 @@ const displayPhotographer = (ArrayOfPhotographer) => {
 
 // Filtre les photographes par tags
 
-const filterTag = () => 
-    getElementById
+const filterTag = (arrayOfPhotographer) => {
+    const tags = document.querySelectorAll(".tags");
+    tags.forEach((tag) => {
+      tag.addEventListener("click", (e) => {
+        let currentTag = e.currentTarget.getAttribute("tag");
+        const newArrayOfPhotographer = arrayOfPhotographer.filter((div) =>
+          div.tags.includes(currentTag)
+        );
+        currentArrayOfPhotographer = [newArrayOfPhotographer];
+        main.innerHTML = "" ;
+        displayPhotographer(newArrayOfPhotographer);
+      });
+    });
+  };
 
 // récupérer fichier JSON
 
@@ -40,7 +53,7 @@ const filterTag = () =>
 const getData = async () =>
     await fetch("../data.json")
       .then((res) => res.json())
-      .catch ((error) => console.log("erreur"))
+      .catch((error) => console.log("erreur"))
   
   
 

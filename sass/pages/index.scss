@@ -41,18 +41,18 @@
         color: #c4c4c4;
       font-size: 0.56rem;
       }
-      &__link {
-        display: flex;
-      justify-content: center;
+      div {
+        &__tag {
+          display: flex;
+          justify-content: center;
+          border: solid 0.5px #c4c4c4;
+          border-radius: 11px;
+          margin: auto 5px;
+          padding: 3px 5px;
+        }
       }
     }
   }
   
-  .card__link button {
-    border: solid 0.5px #c4c4c4;
-    border-radius: 11px;
-    margin: auto 5px;
-    padding: 3px 5px;
-  }
   
   
