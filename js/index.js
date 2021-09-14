@@ -2,7 +2,7 @@
 
 //DOM
 
-const mainLink = document.querySelector(".main-link");
+
 const passerAuContenu = document.querySelector(".passer-au-contenu");
 
 // faire apparaitre "passer au contenu" au scroll
@@ -19,24 +19,34 @@ const displayPasserAuContenu = () => {
     });
 };
 
+// Affiche les photographes 
 
-// récupérer fichier JSON test
+const displayPhotographer = (ArrayOfPhotographer) => {
+    const main = document.querySelector(".main");
+    ArrayOfPhotographer.forEach((photographer) => {
+        let photographerModel = new Photographer(photographer)
+        main.innerHTML += photographerModel.createhtml()
+    });
+};
+
+// Filtre les photographes par tags
+
+const filterTag
+
+// récupérer fichier JSON
 
 
-const getData = async () => {
+const getData = async () =>
     await fetch("../data.json")
       .then((res) => res.json())
-      .then((data) => {
-        displayPhotographer(data.photographers);
+      .catch ((error) => console.log("erreur"))
   
-        filterTag(data.photographers);
-      });
-  };
   
 
 const init = async() => {
     displayPasserAuContenu();
-    getData();
-    displayPhotographer();
+    const data = await getData();
+    displayPhotographer(data.photographers);
+    filterTag(data.photographers);
 }
 init();
