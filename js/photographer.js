@@ -15,7 +15,7 @@ class Photographer {
         return `
         <figure class="card">
         <a href="photographe.html" class="card__img">
-        <img src="./public/images/photographes/miniatures/${this.portrait}" alt="">
+        <img src="public/images/photographes/Miniatures/${this.portrait}" alt="">
           <h2>${this.name}</h2>
         </a>
         <figcaption class="card__content">
