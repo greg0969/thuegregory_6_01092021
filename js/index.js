@@ -24,9 +24,11 @@ const displayPasserAuContenu = () => {
 
 const displayPhotographer = (ArrayOfPhotographer) => {
     const main = document.querySelector(".main");
+    const main1 = document.querySelector(".mainPhotographer");
     ArrayOfPhotographer.forEach((photographer) => {
         let photographerModel = new Photographer(photographer)
         main.innerHTML += photographerModel.createhtml()
+        main.innerHTML = photographerModel.createhtml1()
     });
 };
 
@@ -54,7 +56,7 @@ const filterTag = (arrayOfPhotographer) => {
   };
 
   let urlId = window.location.search.substr(4);
-  console.log("urlId");
+  console.log(urlId);
 
 
 // récupérer fichier JSON
