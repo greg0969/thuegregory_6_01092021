@@ -14,7 +14,7 @@ class Photographer {
     createhtml() {
         return `
         <figure class="card">
-        <a href="photographe.html" class="card__img">
+        <a href="photographe.html?id=${this.id}" id ="${this.id} "class="card__img">
         <img src="public/images/photographes/Miniatures/${this.portrait}" alt="">
           <h2>${this.name}</h2>
         </a>
@@ -32,6 +32,28 @@ class Photographer {
         
         `
     }
+    createhtml1() { // Possible de faire ça ?
+      return `
+      <figure class="card">
+      <img src="public/images/photographes/Miniatures/${this.portrait}" alt="">
+        <h2>${this.name}</h2>
+      </a>
+      <figcaption class="card__content">
+        <h3 class="cardTitle">${this.city}, ${this.country}</h3>
+        <p class="card__content__tagline">
+          ${this.tagline}
+        </p>
+        <p class="card__content__price">${this.price}€/jour</p>
+      <div class="card__content__tag tag-style">
+        ${this.tags}
+      </div>
+      </figcaption>
+      </figure>
+      
+      `
+  }
 }
+
+
 
 

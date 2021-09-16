@@ -1,8 +1,7 @@
-// test pattern factory
 
 class Picture { 
     constructor(data) {  
-    this.name = data.name ;
+    this.id = data.id ;
     this.photographerId = data.photographerId ;
     this.title = data.title ;
     this.image = data.image ;
@@ -20,7 +19,7 @@ createhtml() {
 
 class Video { 
     constructor(data) {
-        this.name = data.name ;
+        this.id = data.id ;
         this.photographerId = data.photographerId ;
         this.title = data.title ;
         this.video = data.video ;
@@ -33,7 +32,7 @@ class Video {
     
 }
 
-export default class MediasFactory {
+class MediasFactory {
     constructor(data) {
         if(data.type) {
             return new Video(data.type);

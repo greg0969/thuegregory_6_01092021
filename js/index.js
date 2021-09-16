@@ -30,6 +30,12 @@ const displayPhotographer = (ArrayOfPhotographer) => {
     });
 };
 
+// Afficher seulement le photographe avec l'id correspondant ?
+
+const displayPhotographerDetails = () => {
+
+}
+
 // Filtre les photographes par tags
 
 const filterTag = (arrayOfPhotographer) => {
@@ -47,14 +53,17 @@ const filterTag = (arrayOfPhotographer) => {
     });
   };
 
-// récupérer fichier JSON
+  let urlId = window.location.search.substr(4);
+  console.log("urlId");
 
+
+// récupérer fichier JSON
 
 const getData = async () =>
     await fetch("./data.json")
       .then((res) => res.json())
-      .catch((error) => console.log("erreur"))
-  
+      .catch((error) => console.log("erreur"));
+
   
 
 const init = async() => {
@@ -64,3 +73,4 @@ const init = async() => {
     filterTag(data.photographers);
 }
 init();
+
