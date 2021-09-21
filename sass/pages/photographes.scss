@@ -1,3 +1,59 @@
 @import "../utils/variables";
 @import "../utils/mixins";
 
+
+.card-details {
+    background: #FAFAFA;
+    border-radius: 5px; 
+    display: flex;
+    justify-content: space-around;
+    margin: 0 100px 0 100px;
+    padding: 56px 0 56px 0;
+    .btn-contact {
+        background: #911C1C;
+        border-radius: 5px;
+        height: 69px;
+        width: 170px;
+        margin: 50px 0 0 -95px;
+        p {
+            color: white;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 26px;
+            text-align: center;
+        }
+    }
+    &__content {
+     
+        &__tagline {
+            margin-top: 0;
+        }  
+        h1 {
+            font-size: 64px ;
+            font-weight: 400;
+            color: #D3573C;
+            margin-left: 0;
+        }
+        h2 {
+            font-size: 24px;
+            color: #901C1C ;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+        .tag-style {
+            background-color: unset;
+        }
+    }
+    img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 6px 6px 8px -6px rgba(0, 0, 0, 0.35);
+    }
+    
+}
+
+.main-photographe {
+    display: unset;
+}

@@ -32,23 +32,27 @@ class Photographer {
         
         `
     }
-    createhtml1() { // Possible de faire ça ?
+    createhtml1() { 
       return `
-      <figure class="card">
-      <img src="public/images/photographes/Miniatures/${this.portrait}" alt="">
-        <h2>${this.name}</h2>
-      </a>
-      <figcaption class="card__content">
-        <h3 class="cardTitle">${this.city}, ${this.country}</h3>
-        <p class="card__content__tagline">
+      <section class="card-details">
+      <div class="card-details__content">
+        <h1 class="card-details__title">${this.name}</h2>
+        <h2>${this.city}, ${this.country}</h3>
+        <p class="card-details__content__tagline">
           ${this.tagline}
         </p>
-        <p class="card__content__price">${this.price}€/jour</p>
-      <div class="card__content__tag tag-style">
-        ${this.tags}
+        <div class="card-details__content__tag tag-style">
+          ${this.tags}
+        </div>
       </div>
-      </figcaption>
-      </figure>
+      <a href="" class="btn-contact">
+          <p>Contactez-moi</p>
+        </a>
+      <img src="public/images/photographes/Miniatures/${this.portrait}" alt="">
+      </section>
+      <span>
+        <p>Trier par</p>
+      </span>
       
       `
   }

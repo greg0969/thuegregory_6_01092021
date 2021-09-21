@@ -24,19 +24,13 @@ const displayPasserAuContenu = () => {
 
 const displayPhotographer = (ArrayOfPhotographer) => {
     const main = document.querySelector(".main");
-    
     ArrayOfPhotographer.forEach((photographer) => {
         let photographerModel = new Photographer(photographer)
         main.innerHTML += photographerModel.createhtml()
-       
     });
 };
 
-// Afficher seulement le photographe avec l'id correspondant ?
 
-const displayPhotographerDetails = () => {
-
-}
 
 // Filtre les photographes par tags
 
@@ -54,9 +48,6 @@ const filterTag = (arrayOfPhotographer) => {
       });
     });
   };
-
-  let urlId = window.location.search.substr(4);
-  console.log(urlId);
 
 
 // récupérer fichier JSON
