@@ -1,19 +1,24 @@
 
-const displayPhotographerModel = (ArrayOfPhotographer) => {
-    let urlId = window.location.search.substr(4);
+const displayPhotographerModel = (photographers) => {
+    let urlParam = new URLSearchParams(window.location.search); //URLSearchParams
+    const photographerId = urlParam.get("id"); 
     const main = document.querySelector(".main");
-    ArrayOfPhotographer.forEach((photographer) => {
-        let photographerModel = new Photographer(photographer)
-        main.innerHTML = photographerModel.createhtml1();
+    
+    const selectedPhotographer = photographers.find(photographer => {
+        const photographerIdString = photographer.id.toString();
+        return photographerIdString === photographerId ;
     });
+
+    let photographerModel = new Photographer(selectedPhotographer)
+        main.innerHTML = photographerModel.createhtml1();
+
+
+        const mediaGallery = Filter
+        updateMediaGallery(mediaGallery) 
+
+        
+        
     };
-
-const getData = async () =>
-    await fetch("./data.json")
-      .then((res) => res.json())
-      .catch((error) => console.log("erreur"));
-
-  
 
 const init = async() => {
     const data = await getData();

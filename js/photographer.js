@@ -42,7 +42,7 @@ class Photographer {
           ${this.tagline}
         </p>
         <div class="card-details__content__tag tag-style">
-          ${this.tags}
+          ${this.tags}  
         </div>
       </div>
       <a href="" class="btn-contact">
@@ -50,9 +50,7 @@ class Photographer {
         </a>
       <img src="public/images/photographes/Miniatures/${this.portrait}" alt="">
       </section>
-      <span>
-        <p>Trier par</p>
-      </span>
+      
       
       `
   }
