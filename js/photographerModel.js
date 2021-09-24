@@ -13,8 +13,11 @@ const displayPhotographerModel = (photographers) => {
         main.innerHTML = photographerModel.createhtml1();
 
 
-        const mediaGallery = Filter
-        updateMediaGallery(mediaGallery) 
+        const mediaGallery = (urlId) =>  { 
+            medias.filter(media.photographerId.toString() === urlId )
+            return mediaGallery ; 
+        }
+        const updatedMediaGallery = mediaGallery(photographerId);
 
         
         
