@@ -1,7 +1,7 @@
+// Class photographer
 class Photographer {
     constructor(data) {
         this.name = data.name ;
-        this.photographerId = data.photographerId ;
         this.id = data.id ;
         this.city = data.city ;
         this.country = data.country ;
@@ -11,11 +11,11 @@ class Photographer {
         this.portrait = data.portrait ;
         this.type = data.type
     }
-    createhtml() {
+    displayPhotographers() { //html index
         return `
         <figure class="card">
         <a href="photographe.html?id=${this.id}" id ="${this.id} "class="card__img">
-        <img src="public/images/photographes/Miniatures/${this.portrait}" alt="">
+        <img src="public/images/photographes/Photographers ID Photos/${this.portrait}" alt="">
           <h2>${this.name}</h2>
         </a>
         <figcaption class="card__content">
@@ -32,7 +32,7 @@ class Photographer {
         
         `
     }
-    createhtml1() { 
+    displayPhotographerCard() { //html photographerModel
       return `
       <section class="card-details">
       <div class="card-details__content">
@@ -48,7 +48,7 @@ class Photographer {
       <a href="" class="btn-contact">
           <p>Contactez-moi</p>
         </a>
-      <img src="public/images/photographes/Miniatures/${this.portrait}" alt="">
+      <img src="public/images/photographes/Photographers ID Photos/${this.portrait}" alt="">
       </section>
       
       

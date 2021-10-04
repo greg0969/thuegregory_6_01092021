@@ -1,10 +1,4 @@
 
-
-//DOM
-
-
-
-
 // faire apparaitre "passer au contenu" au scroll
 
 const displayPasserAuContenu = () => {
@@ -26,7 +20,7 @@ const displayPhotographer = (ArrayOfPhotographer) => {
     const main = document.querySelector(".main");
     ArrayOfPhotographer.forEach((photographer) => {
         let photographerModel = new Photographer(photographer)
-        main.innerHTML += photographerModel.createhtml()
+        main.innerHTML += photographerModel.displayPhotographers()
     });
 };
 
@@ -48,16 +42,12 @@ const filterTag = (arrayOfPhotographer) => {
       });
     });
   };
-
-
-// récupérer fichier JSON
-
-const getData = async () =>
-    await fetch("./data.json")
-      .then((res) => res.json())
-      .catch((error) => console.log("erreur"));
-
   
+  const getData = async () =>
+  await fetch("./data.json")
+    .then((res) => res.json())
+    .catch((error) => console.log("erreur"));
+
 
 const init = async() => {
     displayPasserAuContenu();
