@@ -1,4 +1,5 @@
 .tag-style {
+    display: flex;
     font-size: 0.75rem;
     line-height: 0.94rem;
     font-weight: 500;
@@ -6,4 +7,54 @@
     background-color: white;
     border: none;
     cursor: pointer;
+    padding-left: unset;
+    li {
+      list-style-type: none;
+    }
   }
+
+  .tag {
+    
+    border: solid 0.5px #c4c4c4;
+    border-radius: 11px;
+    padding: 3px 5px;
+    margin-right: 5px;
+  }
+
+  .sortBy {
+    margin: 30px 7%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    p {
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .sortDiv {
+      font-size: 18px;
+      font-weight: 700;
+      label {
+        select {
+          width: 170px;
+          height: 50px;
+          border: 1px solid #901c1c;
+          padding: 15px;
+          border-radius: 5px;
+          font-size: 18px;
+          background-color: #901c1c;
+          color: white;
+          border: none;
+          font-weight: 700;
+          option {
+            border: 1px solid white;
+            font-weight: 700;
+            font-size: 18px;  
+          }
+        }
+      }   
+    }
+  }
+  

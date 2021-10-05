@@ -24,9 +24,10 @@ class Photographer {
             ${this.tagline}
           </p>
           <p class="card__content__price">${this.price}€/jour</p>
-        <div class="card__content__tag tag-style">
-          ${this.tags}
-        </div>
+          <ul class="card__content__tag tag-style">
+              ${this.tags.map((tag) =>
+              `<li><a><span class="tag">#${tag}</span> </a></li>`).join("")}
+          </ul>
         </figcaption>
         </figure>
         
@@ -41,9 +42,10 @@ class Photographer {
         <p class="card-details__content__tagline">
           ${this.tagline}
         </p>
-        <div class="card-details__content__tag tag-style">
-          ${this.tags}  
-        </div>
+        <ul class="card__content__tag tag-style">
+        ${this.tags.map((tag) =>
+        `<li><a><span class="tag">#${tag}</span> </a></li>`).join("")}
+    </ul>
       </div>
       <a href="" class="btn-contact">
           <p>Contactez-moi</p>

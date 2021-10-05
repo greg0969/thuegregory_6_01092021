@@ -5,11 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fisheye</title>
+    <script src="https://kit.fontawesome.com/f7a1214a9b.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap"rel="stylesheet"/>
+      href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap"
+      rel="stylesheet"
+    />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap"rel="stylesheet"/>
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap"
+      rel="stylesheet"/>
     <link rel="stylesheet" href="public/css/style.css" />
   </head>
 
@@ -19,20 +23,23 @@
         <img src="public/images/logo/logo.png" alt="Logo Fisheye" />
       </a>
     </header>
-    <main class="main main-photographe">
-      
-
-     
-    </main>
-    <span>
+    <main class="main main-photographe"></main>
+    <span class="sortBy">
       <p>Trier par</p>
+      <div class="sortDiv">
+        <label>
+          <select>
+            <option>Popularité</option>
+            <option>Date</option>
+            <option>Titre</option>
+          </select>
+        </label>
+      </div>
     </span>
-    <div class="gallerie">
-
-    </div>
+    <section class="gallerie"></section>
   </body>
+  <script src="js/media.js "></script>
   <script src="js/photographer.js"></script>
   <script src="js/fetchApi.js"></script>
   <script src="js/photographerModel.js"></script>
-  <script src="js/media.js "></script>
 </html>
