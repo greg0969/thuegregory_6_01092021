@@ -1,27 +1,10 @@
-
-const heart = document.getElementsByClassName("fa-heart");
+const divFav = document.querySelectorAll(".likes");
 const nbLike = document.getElementsByClassName("nbLike");
-let isLiked = false ; 
+const heart = document.getElementsByClassName("fa-heart");
 
-function addLike() {
-    heart.style.fontWeight == "bold";
-    return isLiked = true ;
-} 
+divFav.addEventListener("click",e) 
+e.preventDefault();
+heart.setAttribute("aria-label","liked");
+heart.style.fontWeight == "bold";
 
-function removeLike() {
-    heart.style.fontWeight == "bold";
-    return isLiked = false ;
-}
-
-function updateLike() {
-    const divFav = document.querySelectorAll(".likes");
-
-    if (isLiked){
-        divFav.forEach(fav => fav.addEventListener("click",addLike)); 
-    }
-
-    if (isLiked = true){
-        divFav.forEach(fav => fav.addEventListener("click",removeLike));
-    }
-}
 
