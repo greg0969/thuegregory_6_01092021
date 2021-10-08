@@ -145,17 +145,16 @@ a {
 
 /* MAIN */
 .main {
-  display: grid;
-  grid-template-columns: 200px 200px 200px;
+  display: flex;
+  flex-wrap: wrap;
   row-gap: 3.5rem;
   justify-content: space-between;
-  margin: auto 7% 4rem 4%;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 25%;
 }
 .card__img {
   width: 100%;

@@ -19,7 +19,7 @@ class Picture {
             <figcaption class="mediaDetail">
                 <p>${this.title}</p>
                 <div class="likes">
-                    <span>${this.likes}</span>
+                    <span class="nbLike">${this.likes}</span>
                     <i class="fa-heart far"></i>                 
                 </div>
             </figcaption>
@@ -51,8 +51,9 @@ class Video {
           <figcaption>
               <p>${this.title}</p>
               <div class="likes">
-                  <span>${this.likes}</span>                 
-              </div>
+                    <span class="nbLike">${this.likes}</span>
+                    <i class="fa-heart far"></i>                 
+                </div>
           </figcaption>
     </article>   
         `;

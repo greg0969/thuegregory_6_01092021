@@ -22,7 +22,6 @@ function displayGallery(mediaGallery) {
   mediaGallery.forEach((media) => {
     const relevantMedia = new MediasFactory(media);
 
-    console.log(relevantMedia)
     relevantMediaDiv.innerHTML += relevantMedia.displayRelevantMedia();
   });
 }
@@ -30,5 +29,6 @@ function displayGallery(mediaGallery) {
 const init = async () => {
   const data = await getData();
   displayPhotographerModel(data.photographers, data.media);
+  updateLike();
 };
 init();
