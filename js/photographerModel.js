@@ -29,6 +29,6 @@ function displayGallery(mediaGallery) {
 const init = async () => {
   const data = await getData();
   displayPhotographerModel(data.photographers, data.media);
-  updateLike();
+  //updateLike();
 };
 init();

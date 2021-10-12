@@ -8,7 +8,7 @@ class Lightbox {
         }));
     }
 
-    constructor (url) {
+    constructor () {
         const 
     }
 

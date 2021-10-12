@@ -287,3 +287,6 @@ a {
   font-weight: 400;
   align-items: center;
 }
+.gallerie article i {
+  font-weight: bold;
+}

@@ -51,7 +51,7 @@ class Video {
           <figcaption>
               <p>${this.title}</p>
               <div class="likes">
-                    <span class="nbLike">${this.likes}</span>
+                    <span class="likeNumber" aria-label="unliked">${this.likes}</span>
                     <i class="fa-heart far"></i>                 
                 </div>
           </figcaption>
