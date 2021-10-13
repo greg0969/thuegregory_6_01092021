@@ -52,6 +52,7 @@ a {
   border: none;
   cursor: pointer;
   padding-left: unset;
+  justify-content: center;
 }
 .tag-style li {
   list-style-type: none;

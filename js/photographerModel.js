@@ -1,22 +1,45 @@
 const displayPhotographerModel = (photographers, media) => {
-  let urlParam = new URLSearchParams(window.location.search); //récupère l'id dans l'url
+
+  /* On récupère l'id dans l'url   */ 
+  let urlParam = new URLSearchParams(window.location.search); //
   const photographerId = urlParam.get("id");
   const main = document.querySelector(".main");
 
+  /* on cherche le photographe selon l id recupere */
   const selectedPhotographer = photographers.find((photographer) => {
     const photographerIdString = photographer.id.toString();
     return photographerIdString === photographerId;
   });
 
+  /* On créer et affiche la carte du photographe */ 
   let photographerModel = new Photographer(selectedPhotographer);
   main.innerHTML = photographerModel.displayPhotographerCard();
 
+  /* On affiche la gallerie de media du bon photographe */
   const mediaGallery = media.filter(
     (element) => element.photographerId == photographerId
   );
   displayGallery(mediaGallery);
+ 
+/* permet d'afficher les medias trié selon l option selectionnée */
+ document.addEventListener("change", (e) => {
+   const filter = filterByOption(mediaGallery,e.target.value)
+   const relevantMediaDiv = document.querySelector(".gallerie");
+   relevantMediaDiv.innerHTML = ""
+   displayGallery(filter)
+   console.log(filter)
+ })
+  
 };
 
+/* fonction de tri selon les options */
+function filterByOption (media,option) {
+  return media.sort((a,b)=> {
+    return b.likes - a.likes
+  })
+}
+
+/* Fonction qui permet d'afficher la gallerie de medias */
 function displayGallery(mediaGallery) {
   const relevantMediaDiv = document.querySelector(".gallerie");
   mediaGallery.forEach((media) => {
@@ -29,6 +52,6 @@ function displayGallery(mediaGallery) {
 const init = async () => {
   const data = await getData();
   displayPhotographerModel(data.photographers, data.media);
-  //updateLike();
+  updateLike();
 };
 init();

@@ -1,3 +1,4 @@
+
 class Picture {
   constructor(data) {
     this.id = data.id;
@@ -19,8 +20,8 @@ class Picture {
             <figcaption class="mediaDetail">
                 <p>${this.title}</p>
                 <div class="likes">
-                    <span class="nbLike">${this.likes}</span>
-                    <i class="fa-heart far"></i>                 
+                    <span class="nbLike" >${this.likes}</span>
+                    <i class="fa-heart far" aria-label="unliked"></i>                 
                 </div>
             </figcaption>
         </article>
@@ -48,12 +49,12 @@ class Video {
         src="public/images/photographes/${this.photographerId}/${this.video}" alt="${this.alt}" 
         controls="controls" role="button" aria-label="${this.title}"/>
         </figure>
-          <figcaption>
+          <figcaption class="mediaDetail">
               <p>${this.title}</p>
               <div class="likes">
-                    <span class="likeNumber" aria-label="unliked">${this.likes}</span>
-                    <i class="fa-heart far"></i>                 
-                </div>
+                  <span class="nbLike">${this.likes}</span>
+                  <i class="fa-heart far" aria-label="unliked"></i>                 
+              </div>
           </figcaption>
     </article>   
         `;
