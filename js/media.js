@@ -20,7 +20,7 @@ class Picture {
             <figcaption class="mediaDetail">
                 <p>${this.title}</p>
                 <div class="likes">
-                    <span class="nbLike" >${this.likes}</span>
+                    <span class="numberOfLikes" >${this.likes}</span>
                     <i class="fa-heart far" aria-label="unliked"></i>                 
                 </div>
             </figcaption>
@@ -52,7 +52,7 @@ class Video {
           <figcaption class="mediaDetail">
               <p>${this.title}</p>
               <div class="likes">
-                  <span class="nbLike">${this.likes}</span>
+                  <span class="numberOfLikes">${this.likes}</span>
                   <i class="fa-heart far" aria-label="unliked"></i>                 
               </div>
           </figcaption>
