@@ -65,10 +65,12 @@ function filterByOption (media,option) {
 
 function displayGallery(mediaGallery) {
   const relevantMediaDiv = document.querySelector(".gallerie");
+  
   mediaGallery.forEach((media) => {
     const relevantMedia = new MediasFactory(media);
 
     relevantMediaDiv.innerHTML += relevantMedia.displayRelevantMedia();
+    
   });
 }
 
