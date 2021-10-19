@@ -1,38 +1,34 @@
-function updateLike(isLiked) {
-    const nbLikes = document.querySelectorAll(".numberOfLikes");
-    const hearts = document.querySelectorAll(".fa-heart");
-    const sectionTotalLikeAndPrice = document.querySelector(".LikesAndPrice");
-    sectionTotalLikeAndPrice.innerHTML = `<span id="totalLikes">${this.price}</span><span class="price">${this.price}</span>`;
-    const totalLikes = document.getElementById("totalLikes").innerHTML = nbLikes.reduce(getTotalLike);
+function updateLike() {
+  const divLikes = document.querySelectorAll(".likes");
+  
+  divLikes.forEach((divOfLike) => {
+    divOfLike.addEventListener("click", () => {
+      isLiked = divOfLike.getAttribute("aria-label");
+      let nbOfLike = divOfLike.textContent;
 
+      if (isLiked == "unliked") {
+        nbOfLike++;
+        divOfLike.innerHTML = `${nbOfLike} <i class="fa-heart far"></i>`;
+        divOfLike.setAttribute("aria-label", "liked");
+      }
 
-  for (let i = 0; i < hearts.length; i++) {
-    isLiked = hearts[i].getAttribute("aria-label");
-  }
-
-  hearts.forEach((heart) => {
-    heart.addEventListener("click", () => {
-
-      for (let i = 0; i < nbLikes.length; i++) {
-        let mediaNbLike = nbLikes[i].textContent;
-
-        if (isLiked == "unliked") {
-          mediaNbLike++;
-          nbLikes[i].innerHTML = mediaNbLike;
-          heart.setAttribute("aria-label", "liked");
-        }
-        
-        if (isLiked == "liked") {
-          mediaNbLike--;
-          nbLikes[i].innerHTML = mediaNbLike;
-          heart.setAttribute("aria-label", "unliked");
-        }
+      if (isLiked == "liked") {
+        nbOfLike--;
+        divOfLike.innerHTML = `${nbOfLike} <i class="fa-heart far"></i>`;
+        divOfLike.setAttribute("aria-label", "unliked");
       }
     });
   });
+  getTotalLike();
 }
 
-
-function getTotalLike(total,nbOfLikes){
-  return total + Math.round(nbOfLikes);
+function getTotalLike() {
+  const nbLikes = document.querySelectorAll(".numberOfLikes");
+  const sectionTotalLikeAndPrice = document.querySelector(".LikesAndPrice");
+  let sumLike = 0;
+  nbLikes.forEach((nbLike) => {
+    sumLike += parseInt(nbLike.textContent);
+  });
+  sectionTotalLikeAndPrice.innerHTML = `<span id="totalLikes">${sumLike}</span>`;
 }
+

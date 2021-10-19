@@ -5,6 +5,7 @@ const displayPhotographerModel = (photographers, media) => {
   let urlParam = new URLSearchParams(window.location.search); 
   const photographerId = urlParam.get("id");
   const main = document.querySelector(".main");
+  
 
   /* on cherche le photographe selon l id recupere */
 
@@ -17,6 +18,7 @@ const displayPhotographerModel = (photographers, media) => {
 
   let photographerModel = new Photographer(selectedPhotographer);
   main.innerHTML = photographerModel.displayPhotographerCard();
+
 
   /* On affiche la gallerie de media du bon photographe */
 
@@ -77,6 +79,7 @@ function displayGallery(mediaGallery) {
 const init = async () => {
   const data = await getData();
   displayPhotographerModel(data.photographers, data.media);
+  getTotalLike();
   updateLike();
 };
 init();

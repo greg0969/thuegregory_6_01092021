@@ -68,5 +68,10 @@ class Photographer {
       
       `;
   }
+  displayPrice() {
+    return `
+      <span class="price">${this.price}</span>
+    `
+  }
   
 }

@@ -19,9 +19,9 @@ class Picture {
             </figure>
             <figcaption class="mediaDetail">
                 <p>${this.title}</p>
-                <div class="likes">
-                <span class="numberOfLikes" aria-label="${this.likes}">${this.likes}</span>
-                    <i class="fa-heart far" aria-label="unliked"></i>                 
+                <div class="likes" aria-label="unliked">
+                <span class="numberOfLikes">${this.likes}</span>
+                    <i class="fa-heart far"></i>                 
                 </div>
             </figcaption>
         </article>
@@ -51,9 +51,9 @@ class Video {
         </figure>
           <figcaption class="mediaDetail">
               <p>${this.title}</p>
-              <div class="likes">
-                  <span class="numberOfLikes" aria-label="${this.likes}">${this.likes}</span>
-                  <i class="fa-heart far" aria-label="unliked"></i>                 
+              <div class="likes" aria-label="unliked">
+                  <span class="numberOfLikes">${this.likes}</span>
+                  <i class="fa-heart far"></i>                 
               </div>
           </figcaption>
     </article>   
