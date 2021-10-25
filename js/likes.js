@@ -1,3 +1,4 @@
+
 function updateLike() {
   const divLikes = document.querySelectorAll(".likes");
   
@@ -16,10 +17,14 @@ function updateLike() {
         nbOfLike--;
         divOfLike.innerHTML = `${nbOfLike} <i class="fa-heart far"></i>`;
         divOfLike.setAttribute("aria-label", "unliked");
+        
       }
+      console.log("oui")
+      getTotalLike();
     });
+    
   });
-  getTotalLike();
+  
 }
 
 function getTotalLike() {
@@ -29,6 +34,5 @@ function getTotalLike() {
   nbLikes.forEach((nbLike) => {
     sumLike += parseInt(nbLike.textContent);
   });
-  sectionTotalLikeAndPrice.innerHTML = `<span id="totalLikes">${sumLike}</span>`;
+  sectionTotalLikeAndPrice.innerHTML = `<span id="totalLikes">${sumLike} <i class="fa-heart far"></i></span><span class="price">${this.price}</span>`;
 }
-

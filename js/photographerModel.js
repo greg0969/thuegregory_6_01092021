@@ -1,3 +1,4 @@
+
 const displayPhotographerModel = (photographers, media) => {
 
   /* On récupère l'id dans l'url */ 
@@ -76,10 +77,13 @@ function displayGallery(mediaGallery) {
   });
 }
 
+
+
 const init = async () => {
   const data = await getData();
   displayPhotographerModel(data.photographers, data.media);
   getTotalLike();
   updateLike();
+  
 };
 init();

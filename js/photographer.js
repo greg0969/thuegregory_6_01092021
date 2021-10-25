@@ -64,8 +64,7 @@ class Photographer {
           this.portrait
         }" alt="">
         </section>
-      
-      
+        
       `;
   }
   displayPrice() {
@@ -73,5 +72,4 @@ class Photographer {
       <span class="price">${this.price}</span>
     `
   }
-  
 }

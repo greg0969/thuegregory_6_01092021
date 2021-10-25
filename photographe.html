@@ -23,7 +23,8 @@
         <img src="public/images/logo/logo.png" alt="Logo Fisheye" />
       </a>
     </header>
-    <main class="main main-photographe"></main>
+    <main class="main main-photographe">
+    </main>
     <span class="sortBy">
       <p>Trier par</p>
       <div class="sortDiv">
@@ -37,12 +38,14 @@
       </div>
     </span>
     <section class="gallerie"></section>
-    <section class="lightbox"></section>
+    <section role="dialog" aria-hidden="true" id="portfolio_photos" class="portfolio_container"></section>
     <section class="LikesAndPrice"></section>
   </body>
-  <script src="js/likes.js "></script>
-  <script src="js/media.js "></script>
   <script src="js/fetchApi.js"></script>
+  <script src="js/likes.js "></script>
+  <script src="js/form.js "></script>
+  <script src="js/lightbox.js "></script>
+  <script src="js/media.js "></script>
   <script src="js/photographer.js"></script>
   <script src="js/photographerModel.js"></script>
 </html>

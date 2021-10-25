@@ -1,0 +1,21 @@
+
+
+.LikesAndPrice {
+    display: flex;
+    float: right;
+    position: sticky;
+    bottom: 0%;
+    background-color: #DB8876;
+    width: 25%;
+    margin-right: 5%;
+    height: 55px;
+    #totalLikes {
+        align-self: center;
+        font-weight: 500;
+        font-size: 24px;
+        margin-left: 8%;
+        i {
+            font-weight: bold;
+        }
+    }
+}

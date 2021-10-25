@@ -65,26 +65,39 @@ a {
   margin-right: 5px;
 }
 
+.LikesAndPrice {
+  display: flex;
+  float: right;
+  position: sticky;
+  bottom: 0%;
+  background-color: #DB8876;
+  width: 25%;
+  margin-right: 5%;
+  height: 55px;
+}
+.LikesAndPrice #totalLikes {
+  align-self: center;
+  font-weight: 500;
+  font-size: 24px;
+  margin-left: 8%;
+}
+.LikesAndPrice #totalLikes i {
+  font-weight: bold;
+}
+
 .sortBy {
   margin: 30px 7%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 20px;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
 }
 .sortBy p {
   font-size: 18px;
-  font-weight: 700;
-}
-.sortBy .sortDiv {
-  font-size: 18px;
-  font-weight: 700;
 }
 .sortBy .sortDiv label select {
   width: 170px;
-  height: 50px;
+  height: 60px;
   border: 1px solid #901c1c;
   padding: 15px;
   border-radius: 5px;
@@ -92,7 +105,7 @@ a {
   background-color: #901c1c;
   color: white;
   border: none;
-  font-weight: 700;
+  font-weight: 600;
 }
 .sortBy .sortDiv label select option {
   border: 1px solid white;
@@ -293,16 +306,4 @@ a {
 }
 .gallerie article i {
   font-weight: bold;
-}
-
-.LikesAndPrice {
-  display: flex;
-  float: right;
-  background-color: #DB8876;
-  width: 25%;
-  margin-right: 5%;
-  height: 60px;
-}
-.LikesAndPrice .totalLikes {
-  align-self: center;
 }
