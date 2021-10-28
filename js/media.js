@@ -11,19 +11,21 @@ class Picture {
     this.date = data.date;
     this.price = data.price;
   }
+   
   displayRelevantMedia() {
     return `
         <article>
             <figure>
-                <img src="public/images/photographes/${this.photographerId}/${this.image}" alt="${this.alt}" />
-            </figure>
-            <figcaption class="mediaDetail">
+                <img class="media" src="public/images/photographes/${this.photographerId}/${this.image}" alt="${this.alt}" />
+            
+              <figcaption class="mediaDetail">
                 <p>${this.title}</p>
                 <div class="likes" aria-label="unliked">
                 <span class="numberOfLikes">${this.likes}</span>
                     <i class="fa-heart far"></i>                 
                 </div>
-            </figcaption>
+              </figcaption>
+            </figure>
         </article>
         `;
   }
@@ -45,10 +47,10 @@ class Video {
     return `
     <article>
         <figure>
-        <video 
-        src="public/images/photographes/${this.photographerId}/${this.video}" alt="${this.alt}" 
-        controls="controls" role="button" aria-label="${this.title}"/>
-        </figure>
+          <video controls="controls" class="media"> 
+            <source src="public/images/photographes/${this.photographerId}/${this.video}" type="${this.type}/mp4"  
+            role="button" aria-label="${this.title}">
+          </video>
           <figcaption class="mediaDetail">
               <p>${this.title}</p>
               <div class="likes" aria-label="unliked">
@@ -56,6 +58,7 @@ class Video {
                   <i class="fa-heart far"></i>                 
               </div>
           </figcaption>
+        </figure>
     </article>   
         `;
   }

@@ -9,30 +9,33 @@ function updateLike() {
 
       if (isLiked == "unliked") {
         nbOfLike++;
-        divOfLike.innerHTML = `${nbOfLike} <i class="fa-heart far"></i>`;
+        divOfLike.innerHTML = ` <span class="numberOfLikes">${nbOfLike}</span> <i class="fa-heart far"></i>`;
         divOfLike.setAttribute("aria-label", "liked");
       }
 
       if (isLiked == "liked") {
         nbOfLike--;
-        divOfLike.innerHTML = `${nbOfLike} <i class="fa-heart far"></i>`;
+        divOfLike.innerHTML = ` <span class="numberOfLikes">${nbOfLike}</span> <i class="fa-heart far"></i>`;
         divOfLike.setAttribute("aria-label", "unliked");
-        
       }
-      console.log("oui")
-      getTotalLike();
+      
+      getTotalLike(); 
+
     });
     
   });
   
 }
 
+
 function getTotalLike() {
+
   const nbLikes = document.querySelectorAll(".numberOfLikes");
-  const sectionTotalLikeAndPrice = document.querySelector(".LikesAndPrice");
+  const totalLikes = document.getElementById("totalLikes");
   let sumLike = 0;
   nbLikes.forEach((nbLike) => {
     sumLike += parseInt(nbLike.textContent);
   });
-  sectionTotalLikeAndPrice.innerHTML = `<span id="totalLikes">${sumLike} <i class="fa-heart far"></i></span><span class="price">${this.price}</span>`;
+
+  totalLikes.innerHTML = `${sumLike} <i class="fa-heart far"></i>`;
 }

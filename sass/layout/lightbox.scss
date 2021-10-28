@@ -1,0 +1,30 @@
+.lightbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+   i {
+       font-size: 45px;
+       color: #901C1C;
+       cursor: pointer;
+   }
+   &__container {
+       display: flex;
+       justify-content: center;
+       img {
+            width: 90%;
+        }
+   }
+    &__close {
+        position: absolute;
+        top: 4.2em;
+        right: 2%;
+    }
+    &__next {
+        
+    }
+    &__previous {
+        
+    }
+    
+}

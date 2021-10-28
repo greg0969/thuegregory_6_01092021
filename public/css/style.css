@@ -65,6 +65,70 @@ a {
   margin-right: 5px;
 }
 
+/* modal */
+.btn_contact {
+  background: #901C1C;
+  color: #FFFFFF;
+  height: 69px;
+  border-radius: 5px;
+  border: none;
+  margin: 0 0 0 0;
+  padding: 0 0.7em;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26.04px;
+  text-align: center;
+  margin: 0.5em 2em;
+  cursor: pointer;
+}
+.btn_contact:hover, .btn_contact:focus {
+  color: #000000;
+  background-color: #D3573C;
+}
+
+.btn-submit {
+  background: #901C1C;
+  color: #FFFFFF;
+  width: 150px;
+  height: 62px;
+  border-radius: 5px;
+  display: block;
+  margin: 2em 0;
+  padding: 0 2em;
+  cursor: pointer;
+  border: 0;
+  font-size: 16px;
+}
+.btn-submit:hover, .btn-submit:focus {
+  color: #000000;
+  background-color: #D3573C;
+}
+
+.close {
+  position: absolute;
+  right: 23px;
+  top: 25px;
+  width: 60px;
+  height: 60px;
+  opacity: 1;
+  cursor: pointer;
+  transform: scale(0.7);
+}
+.close:before, .close:after {
+  position: absolute;
+  right: 30px;
+  content: " ";
+  height: 60px;
+  width: 5px;
+  background-color: #fff;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+
 .LikesAndPrice {
   display: flex;
   float: right;
@@ -83,6 +147,12 @@ a {
 }
 .LikesAndPrice #totalLikes i {
   font-weight: bold;
+}
+.LikesAndPrice #price {
+  align-self: center;
+  font-weight: 500;
+  font-size: 24px;
+  margin-left: 20%;
 }
 
 .sortBy {
@@ -157,6 +227,28 @@ a {
   color: black;
 }
 
+.lightbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lightbox i {
+  font-size: 45px;
+  color: #901C1C;
+  cursor: pointer;
+}
+.lightbox__container {
+  display: flex;
+  justify-content: center;
+}
+.lightbox__container img {
+  width: 90%;
+}
+.lightbox__close {
+  position: absolute;
+  top: 4.2em;
+  right: 2%;
+}
 /* MAIN */
 .main {
   display: flex;
@@ -275,25 +367,23 @@ a {
 }
 .gallerie article figure {
   width: 350px;
-  height: 300px;
 }
 .gallerie article figure img {
   width: 100%;
-  height: 100%;
+  height: 300px;
   object-fit: cover;
   border-radius: 5px;
   cursor: pointer;
 }
 .gallerie article figure video {
   width: 100%;
-  height: 100%;
+  height: 300px;
   object-fit: cover;
   border-radius: 5px;
 }
 .gallerie article figcaption {
   display: flex;
   justify-content: space-between;
-  margin: 0 40px;
 }
 .gallerie article figcaption .likes:hover {
   cursor: pointer;

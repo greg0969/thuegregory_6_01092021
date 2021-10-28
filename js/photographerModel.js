@@ -6,7 +6,7 @@ const displayPhotographerModel = (photographers, media) => {
   let urlParam = new URLSearchParams(window.location.search); 
   const photographerId = urlParam.get("id");
   const main = document.querySelector(".main");
-  
+  const priceSpan = document.getElementById("price");
 
   /* on cherche le photographe selon l id recupere */
 
@@ -19,7 +19,7 @@ const displayPhotographerModel = (photographers, media) => {
 
   let photographerModel = new Photographer(selectedPhotographer);
   main.innerHTML = photographerModel.displayPhotographerCard();
-
+  priceSpan.innerHTML = photographerModel.price +`€ / jour`;
 
   /* On affiche la gallerie de media du bon photographe */
 
@@ -28,6 +28,29 @@ const displayPhotographerModel = (photographers, media) => {
   );
   displayGallery(mediaGallery);
  
+  // lightbox
+
+  const lightboxSection = document.querySelector(".lightbox");
+  const links = document.querySelectorAll(".media");
+  const relevantMediaDiv = document.querySelector(".gallerie");
+  
+
+  links.forEach((link) => {
+    link.addEventListener("click", () => {
+      main.innerHTML = ""
+      relevantMediaDiv.innerHTML = ""
+      lightboxSection.innerHTML = 
+      `<i class= "fas fa-chevron-left lightbox__previous"></i>
+      <div class="lightbox__container">
+        
+      </div>
+      <i class="fas fa-chevron-right lightbox__next"></i>
+      <i class="fas fa-times lightbox__close"></i>
+      <span>titre</span>`
+      
+    })
+  })  
+
 /* permet d'afficher les medias trié selon l option selectionnée */
 
  document.addEventListener("change", (e) => {
@@ -68,12 +91,11 @@ function filterByOption (media,option) {
 
 function displayGallery(mediaGallery) {
   const relevantMediaDiv = document.querySelector(".gallerie");
-  
+
   mediaGallery.forEach((media) => {
     const relevantMedia = new MediasFactory(media);
 
     relevantMediaDiv.innerHTML += relevantMedia.displayRelevantMedia();
-    
   });
 }
 

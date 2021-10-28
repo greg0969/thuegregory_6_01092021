@@ -11,8 +11,8 @@ contactBtn.addEventListener("click", () => {
             <form
               name="contact"
               action="photographe.html"
-              method="get"
-            >
+              method="get">
+              
               <div
                 class="formData">
                 <label for="first">Prénom</label><br>
