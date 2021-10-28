@@ -33,7 +33,7 @@ const displayPhotographerModel = (photographers, media) => {
   const lightboxSection = document.querySelector(".lightbox");
   const links = document.querySelectorAll(".media");
   const relevantMediaDiv = document.querySelector(".gallerie");
-  
+  const relevantMedia = new MediasFactory(media);
 
   links.forEach((link) => {
     link.addEventListener("click", () => {
@@ -42,7 +42,7 @@ const displayPhotographerModel = (photographers, media) => {
       lightboxSection.innerHTML = 
       `<i class= "fas fa-chevron-left lightbox__previous"></i>
       <div class="lightbox__container">
-        
+        ${relevantMedia}
       </div>
       <i class="fas fa-chevron-right lightbox__next"></i>
       <i class="fas fa-times lightbox__close"></i>
