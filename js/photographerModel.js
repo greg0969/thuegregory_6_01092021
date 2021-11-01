@@ -1,5 +1,5 @@
-
 const displayPhotographerModel = (photographers, media) => {
+
 
   /* On récupère l'id dans l'url */ 
 
@@ -14,6 +14,7 @@ const displayPhotographerModel = (photographers, media) => {
     const photographerIdString = photographer.id.toString();
     return photographerIdString === photographerId;
   });
+  
 
   /* On créer et affiche la carte du photographe */ 
 
@@ -28,28 +29,6 @@ const displayPhotographerModel = (photographers, media) => {
   );
   displayGallery(mediaGallery);
  
-  // lightbox
-
-  const lightboxSection = document.querySelector(".lightbox");
-  const links = document.querySelectorAll(".media");
-  const relevantMediaDiv = document.querySelector(".gallerie");
-  const relevantMedia = new MediasFactory(media);
-
-  links.forEach((link) => {
-    link.addEventListener("click", () => {
-      main.innerHTML = ""
-      relevantMediaDiv.innerHTML = ""
-      lightboxSection.innerHTML = 
-      `<i class= "fas fa-chevron-left lightbox__previous"></i>
-      <div class="lightbox__container">
-        ${relevantMedia}
-      </div>
-      <i class="fas fa-chevron-right lightbox__next"></i>
-      <i class="fas fa-times lightbox__close"></i>
-      <span>titre</span>`
-      
-    })
-  })  
 
 /* permet d'afficher les medias trié selon l option selectionnée */
 
@@ -58,10 +37,12 @@ const displayPhotographerModel = (photographers, media) => {
    const relevantMediaDiv = document.querySelector(".gallerie");
    relevantMediaDiv.innerHTML = ""
    displayGallery(filter)
-
+   //lightbox();
  })
   
 };
+
+
 
 /* fonction de tri selon les options */
 
@@ -96,9 +77,10 @@ function displayGallery(mediaGallery) {
     const relevantMedia = new MediasFactory(media);
 
     relevantMediaDiv.innerHTML += relevantMedia.displayRelevantMedia();
+    
+
   });
 }
-
 
 
 const init = async () => {
@@ -106,6 +88,6 @@ const init = async () => {
   displayPhotographerModel(data.photographers, data.media);
   getTotalLike();
   updateLike();
-  
+  lightbox(data.media);
 };
 init();

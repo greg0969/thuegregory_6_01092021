@@ -1,4 +1,3 @@
-
 class Picture {
   constructor(data) {
     this.id = data.id;
@@ -10,8 +9,19 @@ class Picture {
     this.likes = data.likes;
     this.date = data.date;
     this.price = data.price;
+    this.type = data.type;
   }
-   
+  displayLightbox() {
+    return `
+    <i class= "fas fa-chevron-left lightbox__previous"></i>
+    <div class="lightbox__container">
+    <img class="lightbox__container__content" src="public/images/photographes/${this.photographerId}/${this.image}" alt="${this.alt}" />
+    </div>
+    <i class="fas fa-chevron-right lightbox__next"></i>
+    <i class="fas fa-times lightbox__close"></i>
+    <span class="title">${this.title}</span>
+      `;
+  }
   displayRelevantMedia() {
     return `
         <article>
@@ -19,7 +29,7 @@ class Picture {
                 <img class="media" src="public/images/photographes/${this.photographerId}/${this.image}" alt="${this.alt}" />
             
               <figcaption class="mediaDetail">
-                <p>${this.title}</p>
+                <p class="title">${this.title}</p>
                 <div class="likes" aria-label="unliked">
                 <span class="numberOfLikes">${this.likes}</span>
                     <i class="fa-heart far"></i>                 
@@ -29,6 +39,7 @@ class Picture {
         </article>
         `;
   }
+  
 }
 
 class Video {
@@ -43,16 +54,30 @@ class Video {
     this.price = data.price;
     this.type = data.type;
   }
+  displayLightbox() {
+    return `
+    <i class= "fas fa-chevron-left lightbox__previous"></i>
+    <div class="lightbox__container">
+    <video controls="controls" class="media"> 
+            <source src="public/images/photographes/${this.photographerId}/${this.video}" type="${this.type}/mp4"  
+            role="button" aria-label="${this.title}">
+          </video>
+    </div>
+    <i class="fas fa-chevron-right lightbox__next"></i>
+    <i class="fas fa-times lightbox__close"></i>
+    <span class="title">${this.title}</span>
+      `;
+  }
   displayRelevantMedia() {
     return `
     <article>
         <figure>
-          <video controls="controls" class="media"> 
+          <video controls="controls" class="lightbox__container__content"> 
             <source src="public/images/photographes/${this.photographerId}/${this.video}" type="${this.type}/mp4"  
             role="button" aria-label="${this.title}">
           </video>
           <figcaption class="mediaDetail">
-              <p>${this.title}</p>
+              <p class="title">${this.title}</p>
               <div class="likes" aria-label="unliked">
                   <span class="numberOfLikes">${this.likes}</span>
                   <i class="fa-heart far"></i>                 
@@ -62,6 +87,7 @@ class Video {
     </article>   
         `;
   }
+  
 }
 
 class MediasFactory {
@@ -69,9 +95,10 @@ class MediasFactory {
     if (data.type == "video") {
       return new Video(data);
     }
-    if (data.type == "picture") {
+    if (data.type == "img") {
       return new Picture(data);
     }
   }
   
 }
+

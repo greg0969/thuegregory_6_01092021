@@ -18,34 +18,38 @@
   </head>
 
   <body>
-    <header class="header">
-      <a href="index.html" class="logo">
-        <img src="public/images/logo/logo.png" alt="Logo Fisheye" />
-      </a>
-    </header>
-    <main class="main main-photographe">
-    </main>
-    <span class="sortBy">
-      <p>Trier par</p>
-      <div class="sortDiv">
-        <label>
-          <select>
-            <option>Popularité</option>
-            <option>Date</option>
-            <option>Titre</option>
-          </select>
-        </label>
-      </div>
-    </span>
-    <section class="gallerie"></section>
+    <div id="content-container">
+      <header class="header">
+        <a href="index.html" class="logo">
+          <img src="public/images/logo/logo.png" alt="Logo Fisheye" />
+        </a>
+      </header>
+      <main class="main main-photographe">
+      </main>
+      <span class="sortBy">
+        <p>Trier par</p>
+        <div class="sortDiv">
+          <label>
+            <select>
+              <option>Popularité</option>
+              <option>Date</option>
+              <option>Titre</option>
+            </select>
+          </label>
+        </div>
+      </span>
+      <section class="gallerie"></section>
+      <section class="LikesAndPrice">
+        <span id="totalLikes"> </span>
+        <span id="price"></span>
+      </section>
+  </div>
     <section aria-hidden="true" class="lightbox">
       
-    </section>
-    <section class="LikesAndPrice">
-      <span id="totalLikes"> </span>
-      <span id="price"></span>
-    </section>
+      
+  </section>
   </body>
+  
   <script src="js/fetchApi.js"></script>
   <script src="js/likes.js "></script>
   <script src="js/form.js "></script>
