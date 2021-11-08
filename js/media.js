@@ -26,7 +26,7 @@ class Picture {
     return `
         <article>
             <figure>
-                <img class="media" src="public/images/photographes/${this.photographerId}/${this.image}" alt="${this.alt}" />
+                <img class="media" data-src="public/images/photographes/${this.photographerId}/${this.image}" aria-label="${this.title}" src="public/images/photographes/${this.photographerId}/${this.image}" alt="${this.alt}" />
             
               <figcaption class="mediaDetail">
                 <p class="title">${this.title}</p>
@@ -58,7 +58,7 @@ class Video {
     return `
     <i class= "fas fa-chevron-left lightbox__previous"></i>
     <div class="lightbox__container">
-    <video controls="controls" class="media"> 
+    <video controls="controls" class="lightbox__container__content"> 
             <source src="public/images/photographes/${this.photographerId}/${this.video}" type="${this.type}/mp4"  
             role="button" aria-label="${this.title}">
           </video>
@@ -72,9 +72,9 @@ class Video {
     return `
     <article>
         <figure>
-          <video controls="controls" class="lightbox__container__content"> 
+          <video controls="controls" data-src="public/images/photographes/${this.photographerId}/${this.video}" class="media" aria-label="${this.title}"> 
             <source src="public/images/photographes/${this.photographerId}/${this.video}" type="${this.type}/mp4"  
-            role="button" aria-label="${this.title}">
+            role="button" >
           </video>
           <figcaption class="mediaDetail">
               <p class="title">${this.title}</p>

@@ -23,27 +23,6 @@
   }
 
 
-/* modal */
-
-.btn_contact {
-  background: #901C1C;
-  color: #FFFFFF;
-  height: 69px;
-  border-radius: 5px;
-  border: none;
-  margin: 0 0 0 0;
-  padding: 0 .7em;
-  font-size:  20px;
-  font-weight: 700;
-  line-height: 26.04px;
-  text-align: center;
-  margin: .5em 2em;
-  cursor: pointer;
-  &:hover,&:focus {
-    color: #000000;
-    background-color: #D3573C;
-  }
-}
 
 .btn-submit {
   background: #901C1C;
@@ -60,31 +39,5 @@
   &:hover,&:focus {
     color: #000000;
     background-color: #D3573C;
-  }
-}
-
-
-.close {
-  position: absolute;
-  right: 23px;
-  top: 25px;
-  width: 60px;
-  height: 60px;
-  opacity: 1;
-  cursor: pointer;
-  transform: scale(0.7);
-  &:before,&:after {
-    position: absolute;
-    right: 30px;
-    content: " ";
-    height: 60px;
-    width: 5px;
-    background-color: #fff;
-  }
-  &:before {
-    transform: rotate(45deg);
-  }
-  &:after {
-    transform: rotate(-45deg);
   }
 }

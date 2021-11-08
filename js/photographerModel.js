@@ -21,7 +21,7 @@ const displayPhotographerModel = (photographers, media) => {
   let photographerModel = new Photographer(selectedPhotographer);
   main.innerHTML = photographerModel.displayPhotographerCard();
   priceSpan.innerHTML = photographerModel.price +`€ / jour`;
-
+  
   /* On affiche la gallerie de media du bon photographe */
 
   const mediaGallery = media.filter(
@@ -37,7 +37,7 @@ const displayPhotographerModel = (photographers, media) => {
    const relevantMediaDiv = document.querySelector(".gallerie");
    relevantMediaDiv.innerHTML = ""
    displayGallery(filter)
-   //lightbox();
+   lightbox();
  })
   
 };
@@ -72,15 +72,15 @@ function filterByOption (media,option) {
 
 function displayGallery(mediaGallery) {
   const relevantMediaDiv = document.querySelector(".gallerie");
-
   mediaGallery.forEach((media) => {
     const relevantMedia = new MediasFactory(media);
 
     relevantMediaDiv.innerHTML += relevantMedia.displayRelevantMedia();
     
-
   });
 }
+
+
 
 
 const init = async () => {
@@ -89,5 +89,6 @@ const init = async () => {
   getTotalLike();
   updateLike();
   lightbox(data.media);
+  displayModalForm();
 };
 init();

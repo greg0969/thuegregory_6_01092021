@@ -2,7 +2,7 @@
     display: none;
     justify-content: center;
     align-items: center;
-   
+    flex-wrap: wrap;
    i {
        font-size: 45px;
        color: #901C1C;
@@ -11,20 +11,31 @@
    &__container {
        display: flex;
        justify-content: center;
+       margin: 5.5em 3em 0 3em;
+       width: 73%;
+       height: 800px;
+       
        &__content {
-            width: 90%;
+            width: 100%;
+            object-fit: cover;
         }
    }
     &__close {
-        position: absolute;
-        top: 4.2em;
-        right: 2%;
+        margin-top: -15em;
+        margin-left: -0.5em;
     }
     &__next {
         
     }
     &__previous {
         
+    }
+    .title {
+        font-size: 24px;
+        color: #901c1c;
+        font-weight: 400;
+        width: 73%;
+        margin-top: 0.5em;
     }
     
 }

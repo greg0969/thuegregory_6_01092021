@@ -57,9 +57,9 @@ class Photographer {
           .join("")}
       </ul>
         </div>
-        <a href="" class="btn-contact">
+        <button class="btn-contact" type="button" aria-role="contact">
             <p>Contactez-moi</p>
-          </a>
+          </button>
         <img src="public/images/photographes/Photographers ID Photos/${
           this.portrait
         }" alt="">
@@ -70,6 +70,78 @@ class Photographer {
   displayPrice() {
     return `
       <span class="price">${this.price}</span>
+    `;
+  }
+  displayModal() {
+    return `
+    
+    <div class="background">  
+      <div class="modalForm__body">
+        <form
+          name="contact"
+          action="photographe.html"
+          method="get">
+        
+          <div class="modalForm__body__title">
+            <p>Contactez-moi</p>
+            <i class="fas fa-times modalForm__body__title__close"></i>
+            
+          </div>
+
+          <div
+            class="formData">
+            <label for="first">Prénom</label><br>
+            <input
+              class="text-control"
+              type="text"
+              id="first"
+              name="first"
+              minlength="2"                                  
+            /><br>
+            
+            
+          </div>
+          <div
+            class="formData">
+            <label for="last">Nom</label><br>
+            <input
+              class="text-control"
+              type="text"
+              id="last"
+              name="last"
+                                  
+            /><br>
+          
+          </div>
+          <div
+            class="formData">
+            <label for="email">E-mail</label><br>
+            <input
+              class="text-control"
+              type="email"
+              id="email"
+              name="email"
+            /><br>
+          </div>
+
+          <div class="formData">
+            <label for="message">Votre message</label><br>
+            <textarea class="text-control" name="message" id="message">
+            
+            </textarea>
+            <br>
+          </div>
+          
+          <input
+            class="btn-submit button"
+            type="submit"
+            value="Envoyer"
+            id="submit-btn"
+          />
+          
+        </form>
+      </div>
+    </div> 
     `
   }
 }

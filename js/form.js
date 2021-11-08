@@ -1,70 +1,92 @@
-const main = document.querySelector(".main");
-const contactBtn = document.querySelector(".btn-contact");
+function displayModalForm(){
+  const contactBtn = document.querySelector(".btn-contact");
 
-contactBtn.addEventListener("click", () => {
-    main.innerHTML = `
-    <div class="bground">
+  contactBtn.addEventListener("click", () => {
+    const modalForm = document.querySelector(".modalForm");
+    const name = document.querySelector(".modalForm__body__title")
+    modalForm.innerHTML = displayModal();
+    /*modalForm.innerHTML = `
+    <div class="background">  
+      <div class="modalForm__body">
+        <form
+          name="contact"
+          action="photographe.html"
+          method="get">
         
-        <div class="content">
-          <span class="close"></span>
-          <div class="modal-body">
-            <form
-              name="contact"
-              action="photographe.html"
-              method="get">
-              
-              <div
-                class="formData">
-                <label for="first">Prénom</label><br>
-                <input
-                  class="text-control"
-                  type="text"
-                  id="first"
-                  name="first"
-                  minlength="2"                                  
-                /><br>
-                
-                
-              </div>
-              <div
-                class="formData">
-                <label for="last">Nom</label><br>
-                <input
-                  class="text-control"
-                  type="text"
-                  id="last"
-                  name="last"
-                                      
-                /><br>
-               
-              </div>
-              <div
-                class="formData">
-                <label for="email">E-mail</label><br>
-                <input
-                  class="text-control"
-                  type="email"
-                  id="email"
-                  name="email"
-                /><br>
-              </div>
-              
-              <input
-                class="btn-submit button"
-                type="submit"
-                value="C'est parti"
-                id="submit-btn"
-              />
-            </form>
+          <div class="modalForm__body__title">
+            <p>Contactez-moi</p>
+            <i class="fas fa-times modalForm__body__title__close"></i>
+            
           </div>
-        </div>
+
+          <div
+            class="formData">
+            <label for="first">Prénom</label><br>
+            <input
+              class="text-control"
+              type="text"
+              id="first"
+              name="first"
+              minlength="2"                                  
+            /><br>
+            
+            
+          </div>
+          <div
+            class="formData">
+            <label for="last">Nom</label><br>
+            <input
+              class="text-control"
+              type="text"
+              id="last"
+              name="last"
+                                  
+            /><br>
+          
+          </div>
+          <div
+            class="formData">
+            <label for="email">E-mail</label><br>
+            <input
+              class="text-control"
+              type="email"
+              id="email"
+              name="email"
+            /><br>
+          </div>
+
+          <div class="formData">
+            <label for="message">Votre message</label><br>
+            <textarea class="text-control" name="message" id="message">
+            
+            </textarea>
+            <br>
+          </div>
+          
+          <input
+            class="btn-submit button"
+            type="submit"
+            value="Envoyer"
+            id="submit-btn"
+          />
+          
+        </form>
       </div>
-    `
-})
+    </div> `*/
+    //name.innerHTML = displayPhotographerName();
+    const close = document.querySelector(".modalForm__body__title__close");
+    close.addEventListener("click", () => {
+      modalForm.style.display = "none";
+    })
 
+    
+  })
 
+/*
 // FIRSTNAME
-form.first.addEventListener("change", function () { validFirst(this); });
+form.first.addEventListener("change", function () { 
+  validFirst(this); 
+});
 
 const validFirst = function (inputFirst) {
   let firstRegExp = new RegExp("^[a-zA-Z]{2,20}$", "g");
@@ -200,41 +222,5 @@ form.addEventListener("submit", function (e) {
     formBg.style.display = "block";
     e.preventDefault();
   }
-});
-
-
-/*<section class="bground" role="dialog" aria-hidden="true">
-        <div class="content" aria-label="formulaire de contact">
-            <h1>Contacter-moi</h1>
-            <span tabindex="0" aria-label="bouton fermer" class="close" id="closeform"></span>
-            <div class="modal-body">
-                <form action="photographe.html" method="GET" id="contactForm">
-                    <!-- garder id= user -->
-                    <input type="hidden" id="id"  name="id" value="243" />
-                    <div class="formData noBr">
-                        <label tabindex="0" for="first">Prénom</label>
-                        <input tabindex="0" aria-required="true" aria-invalid="false" class="text-control" value="" type="text" id="first" name="first" placeholder="Ecrire votre prénom ici" />
-                        <small id="smallFirst"></small>
-                    </div>
-                    <div class="formData noBr">
-                        <label tabindex="0" for="last">Nom</label>
-                        <input tabindex="0" aria-required="true" aria-invalid="false" class="text-control" type="text" id="last" name="last" placeholder="Ecrire votre nom ici" />
-                        <small id="smallLast"></small>
-                    </div>
-                    <div class="formData noBr">
-                        <label tabindex="0" for="email">Email</label>
-                        <input tabindex="0" aria-required="true" aria-invalid="false" class="text-control" type="email" id="email" name="email" placeholder="Ecrire votre email ici" />
-                        <small id="smallEmail"></small>
-                    </div>
-                    <div class="formData noBr">
-                        <label tabindex="0" for="message">Votre message</label>
-                        <textarea aria-required="true" aria-invalid="false" class="text-control" id="message" name="textarea" placeholder="Ecrire votre message ici"></textarea>
-                        <small id="smallTextarea"></small>
-                    </div>
-                    
-                    <!-- btn validate form -->
-                    <input aria-label="bouton d'envoi" class="btn-submit" id="btn_message" type="submit" value="Envoyer" />
-                </form>
-            </div>
-        </div>
-    </section>*/ 
+}); */
+}

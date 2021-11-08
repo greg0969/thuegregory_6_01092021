@@ -1,0 +1,60 @@
+
+.modalForm {
+    .background {
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        overflow: auto;
+        background-color: rgba(98, 100, 110, 0.294);   
+    }
+        
+    &__body {
+        width: 34%;
+        height: 700px;
+        justify-content: center;
+        background: #DB8876;
+        border-radius: 5px;
+        margin-top: 5em;
+        &__title {
+            display: flex;
+            &__close {
+                font-size: 45px;
+                color: white;
+                justify-content: flex-end;
+                margin-top: 0.5em;
+                cursor: pointer;
+            }
+            p {
+                font-size: 45px;
+                width: 80%;
+                margin-left: 8%;
+            } 
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            
+            .formData {
+                margin: 0.5em 8%;
+                .text-control {
+                    width: 100%;
+                    height: 30px;
+                }
+                #message {
+                    height: 130px;
+                }
+                label {
+                    font-size: 20px;
+                }
+            }
+            .btn-submit {
+                margin: 0.5em 8%;
+            }
+        }
+    }
+}

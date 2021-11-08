@@ -65,27 +65,6 @@ a {
   margin-right: 5px;
 }
 
-/* modal */
-.btn_contact {
-  background: #901C1C;
-  color: #FFFFFF;
-  height: 69px;
-  border-radius: 5px;
-  border: none;
-  margin: 0 0 0 0;
-  padding: 0 0.7em;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 26.04px;
-  text-align: center;
-  margin: 0.5em 2em;
-  cursor: pointer;
-}
-.btn_contact:hover, .btn_contact:focus {
-  color: #000000;
-  background-color: #D3573C;
-}
-
 .btn-submit {
   background: #901C1C;
   color: #FFFFFF;
@@ -102,31 +81,6 @@ a {
 .btn-submit:hover, .btn-submit:focus {
   color: #000000;
   background-color: #D3573C;
-}
-
-.close {
-  position: absolute;
-  right: 23px;
-  top: 25px;
-  width: 60px;
-  height: 60px;
-  opacity: 1;
-  cursor: pointer;
-  transform: scale(0.7);
-}
-.close:before, .close:after {
-  position: absolute;
-  right: 30px;
-  content: " ";
-  height: 60px;
-  width: 5px;
-  background-color: #fff;
-}
-.close:before {
-  transform: rotate(45deg);
-}
-.close:after {
-  transform: rotate(-45deg);
 }
 
 .LikesAndPrice {
@@ -231,6 +185,7 @@ a {
   display: none;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 .lightbox i {
   font-size: 45px;
@@ -240,15 +195,82 @@ a {
 .lightbox__container {
   display: flex;
   justify-content: center;
+  margin: 5.5em 3em 0 3em;
+  width: 73%;
+  height: 800px;
 }
 .lightbox__container__content {
-  width: 90%;
+  width: 100%;
+  object-fit: cover;
 }
 .lightbox__close {
-  position: absolute;
-  top: 4.2em;
-  right: 2%;
+  margin-top: -15em;
+  margin-left: -0.5em;
 }
+.lightbox .title {
+  font-size: 24px;
+  color: #901c1c;
+  font-weight: 400;
+  width: 73%;
+  margin-top: 0.5em;
+}
+
+.modalForm .background {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(98, 100, 110, 0.294);
+}
+.modalForm__body {
+  width: 34%;
+  height: 700px;
+  justify-content: center;
+  background: #DB8876;
+  border-radius: 5px;
+  margin-top: 5em;
+}
+.modalForm__body__title {
+  display: flex;
+}
+.modalForm__body__title__close {
+  font-size: 45px;
+  color: white;
+  justify-content: flex-end;
+  margin-top: 0.5em;
+  cursor: pointer;
+}
+.modalForm__body__title p {
+  font-size: 45px;
+  width: 80%;
+  margin-left: 8%;
+}
+.modalForm__body form {
+  display: flex;
+  flex-direction: column;
+}
+.modalForm__body form .formData {
+  margin: 0.5em 8%;
+}
+.modalForm__body form .formData .text-control {
+  width: 100%;
+  height: 30px;
+}
+.modalForm__body form .formData #message {
+  height: 130px;
+}
+.modalForm__body form .formData label {
+  font-size: 20px;
+}
+.modalForm__body form .btn-submit {
+  margin: 0.5em 8%;
+}
+
 /* MAIN */
 .main {
   display: flex;
@@ -316,6 +338,7 @@ a {
   height: 69px;
   width: 170px;
   margin: 50px 0 0 -95px;
+  cursor: pointer;
 }
 .card-details .btn-contact p {
   color: white;
@@ -380,6 +403,7 @@ a {
   height: 300px;
   object-fit: cover;
   border-radius: 5px;
+  cursor: pointer;
 }
 .gallerie article figcaption {
   display: flex;
