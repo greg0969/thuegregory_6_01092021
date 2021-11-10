@@ -15,11 +15,11 @@ class Picture {
     return `
     <i class= "fas fa-chevron-left lightbox__previous"></i>
     <div class="lightbox__container">
-    <img class="lightbox__container__content" src="public/images/photographes/${this.photographerId}/${this.image}" alt="${this.alt}" />
+    <img class="lightbox__container__content media" data-src="public/images/photographes/${this.photographerId}/${this.image}" src="public/images/photographes/${this.photographerId}/${this.image}" alt="${this.alt}" />
     </div>
     <i class="fas fa-chevron-right lightbox__next"></i>
     <i class="fas fa-times lightbox__close"></i>
-    <span class="title">${this.title}</span>
+    <span class="title" id ="lightboxTitle">${this.title}</span>
       `;
   }
   displayRelevantMedia() {
@@ -58,14 +58,14 @@ class Video {
     return `
     <i class= "fas fa-chevron-left lightbox__previous"></i>
     <div class="lightbox__container">
-    <video controls="controls" class="lightbox__container__content"> 
+    <video controls="controls" class="lightbox__container__content media" data-src="public/images/photographes/${this.photographerId}/${this.video}"> 
             <source src="public/images/photographes/${this.photographerId}/${this.video}" type="${this.type}/mp4"  
             role="button" aria-label="${this.title}">
           </video>
     </div>
     <i class="fas fa-chevron-right lightbox__next"></i>
     <i class="fas fa-times lightbox__close"></i>
-    <span class="title">${this.title}</span>
+    <span class="title" id ="lightboxTitle">${this.title}</span>
       `;
   }
   displayRelevantMedia() {

@@ -1,194 +1,149 @@
-function displayModalForm(){
+function displayModalForm() {
   const contactBtn = document.querySelector(".btn-contact");
+  const modalForm = document.querySelector(".modalForm");
+  const first = document.getElementById("first");
+  const last = document.getElementById("last");
+  const email = document.getElementById("email");
+  const textarea = document.getElementById("message");
+  
 
+  // affiche le modal
   contactBtn.addEventListener("click", () => {
-    const modalForm = document.querySelector(".modalForm");
-    const name = document.querySelector(".modalForm__body__title")
-    modalForm.innerHTML = displayModal();
-    /*modalForm.innerHTML = `
-    <div class="background">  
-      <div class="modalForm__body">
-        <form
-          name="contact"
-          action="photographe.html"
-          method="get">
-        
-          <div class="modalForm__body__title">
-            <p>Contactez-moi</p>
-            <i class="fas fa-times modalForm__body__title__close"></i>
-            
-          </div>
+    modalForm.style.display = "block";
 
-          <div
-            class="formData">
-            <label for="first">Prénom</label><br>
-            <input
-              class="text-control"
-              type="text"
-              id="first"
-              name="first"
-              minlength="2"                                  
-            /><br>
-            
-            
-          </div>
-          <div
-            class="formData">
-            <label for="last">Nom</label><br>
-            <input
-              class="text-control"
-              type="text"
-              id="last"
-              name="last"
-                                  
-            /><br>
-          
-          </div>
-          <div
-            class="formData">
-            <label for="email">E-mail</label><br>
-            <input
-              class="text-control"
-              type="email"
-              id="email"
-              name="email"
-            /><br>
-          </div>
 
-          <div class="formData">
-            <label for="message">Votre message</label><br>
-            <textarea class="text-control" name="message" id="message">
-            
-            </textarea>
-            <br>
-          </div>
-          
-          <input
-            class="btn-submit button"
-            type="submit"
-            value="Envoyer"
-            id="submit-btn"
-          />
-          
-        </form>
-      </div>
-    </div> `*/
-    //name.innerHTML = displayPhotographerName();
-    const close = document.querySelector(".modalForm__body__title__close");
-    close.addEventListener("click", () => {
-      modalForm.style.display = "none";
-    })
+  });
 
+  // ferme le modal
+  const close = document.querySelector(".modalForm__body__title__close");
+  close.addEventListener("click", () => {
+    modalForm.style.display = "none";
+  });
+  
+  // FIRSTNAME
+  first.addEventListener("change", () => {
+    validFirst(this);
+  });
+
+  // LASTNAME
+  last.addEventListener("change", () => {
+    validLast(this);
     
-  })
+  });
 
-/*
-// FIRSTNAME
-form.first.addEventListener("change", function () { 
-  validFirst(this); 
-});
+  //  MAIL
+  email.addEventListener("change", () => {
+  validEmail(this);
+  });
 
-const validFirst = function (inputFirst) {
+  // MESSAGE
+  textarea.addEventListener("change", () => {
+    validMessage(this);
+  });
+
+}
+
+
+const modalForm = document.querySelector(".modalForm");
+const form = document.querySelector("form");
+
+
+function validFirst() {
+  const errorMsg = document.querySelector(".firstError");
+  const inputFirst = document.getElementById("first");
+
   let firstRegExp = new RegExp("^[a-zA-Z]{2,20}$", "g");
-
   let testFirst = firstRegExp.test(inputFirst.value);
 
-  let small = inputFirst.nextElementSibling;
-
   if (testFirst) {
-    small.style.display = "none";
-    small.classList.remove("text-danger");
-    inputFirst.style.border = "green solid 2px";
+    errorMsg.style.display = "none";
+    inputFirst.style.border = "green solid 3px";
     form.first.setAttribute("aria-invalid", "true");
     return true;
-  } else {
-    small.style.display = "inline-block";
-    small.innerHTML = "Vous devez entrer 2 caractères ou plus.";
-    small.classList.add("text-danger");
-    inputFirst.style.border = "red solid 2px";
+  }
+  if (!testFirst) {
+    errorMsg.style.display = "inline-block";
+    errorMsg.innerHTML = "Vous devez entrer 2 caractères ou plus.";
+    inputFirst.style.border = "red solid 3px";
     form.first.setAttribute("aria-invalid", "false");
     return false;
   }
-};
+}
 
-// LASTNAME
-form.last.addEventListener("change", function () { validLast(this); });
 
-const validLast = function (inputLast) {
+
+function validLast() {
+  const errorMsg = document.querySelector(".lastError");
+  const inputLast = document.getElementById("last");
+
   let lastRegExp = new RegExp("^[a-zA-Z]{2,20}$", "g");
-
   let testLast = lastRegExp.test(inputLast.value);
 
-  let small = inputLast.nextElementSibling;
-
   if (testLast) {
-    small.style.display = "none";
-    small.classList.remove("text-danger");
-    inputLast.style.border = "green solid 2px";
+    errorMsg.style.display = "none";
+    inputLast.style.border = "green solid 3px";
     form.last.setAttribute("aria-invalid", "true");
     return true;
-  } else {
-    small.style.display = "inline-block";
-    small.innerHTML = "Vous devez entrer 2 caractères ou plus.";
-    small.classList.add("text-danger");
-    inputLast.style.border = "red solid 2px";
+  }
+  if (!testLast) {
+    errorMsg.style.display = "block";
+    errorMsg.innerHTML = "Vous devez entrer 2 caractères ou plus.";
+    inputLast.style.border = "red solid 3px";
+
     form.last.setAttribute("aria-invalid", "false");
     return false;
   }
-};
+}
 
-//  MAIL
-form.email.addEventListener("change", function () { validEmail(this); });
 
-const validEmail = function (inputEmail) {
-  let emailRegExp = new RegExp( "^[a-zA-Z0-9.-_]+[@]{1}[a-zA-Z0-9.-_]+[.]{1}[a-z]{2,10}$", "g" );
 
+function validEmail() {
+
+  const errorMsg = document.querySelector(".mailError");
+  const inputEmail = document.getElementById("email");
+  
+  let emailRegExp = new RegExp(
+    "^[a-zA-Z0-9.-_]+[@]{1}[a-zA-Z0-9.-_]+[.]{1}[a-z]{2,10}$",
+    "g"
+  );
   let testEmail = emailRegExp.test(inputEmail.value);
 
-  let small = inputEmail.nextElementSibling;
-
   if (testEmail) {
-    small.style.display = "none";
-    small.classList.remove("text-danger");
-    inputEmail.style.border = "green solid 2px";
+    errorMsg.style.display = "none";
+    inputEmail.style.border = "green solid 3px";
     form.email.setAttribute("aria-invalid", "true");
     return true;
-  } else {
-    small.style.display = "inline-block";
-    small.innerHTML = "Vous devez entrer une adresse email valide.";
-    small.classList.add("text-danger");
-    inputEmail.style.border = "red solid 2px";
+  }
+  if (!testEmail) {
+    inputEmail.style.border = "red solid 3px";
+    errorMsg.style.display = "inline-block";
     form.email.setAttribute("aria-invalid", "false");
     return false;
   }
-};
+}
 
-// MESSAGE
-form.textarea.addEventListener("change", function () { validMessage(this); });
 
-const validMessage = function (inputTextarea) {
+function validMessage() {
+
+  const errorMsg = document.querySelector(".msgError");
+  const inputTextarea = document.getElementById("message");
+
   let textareaRegExp = new RegExp("^[a-zA-Z]{2,20}$", "g");
-
   let testTextarea = textareaRegExp.test(inputTextarea.value);
 
-  let small = inputTextarea.nextElementSibling;
-
   if (testTextarea) {
-    small.style.display = "none";
-    small.classList.remove("text-danger");
-    inputTextarea.style.border = "green solid 2px";
+    errorMsg.style.display = "none";
+    inputTextarea.style.border = "green solid 3px";
     form.textarea.setAttribute("aria-invalid", "true");
     return true;
-  } else {
-    small.style.display = "inline-block";
-    small.innerHTML = "Vous devez entrer 2 caractères ou plus.";
-    small.classList.add("text-danger");
-    inputTextarea.style.border = "red solid 2px";
+  } 
+  if (!testTextarea) {
+    inputTextarea.style.border = "red solid 3px";
+    errorMsg.style.display = "inline-block";
     form.textarea.setAttribute("aria-invalid", "false");
     return false;
   }
 };
-
 
 //  VALIDATION BTN
 
@@ -199,28 +154,30 @@ form.addEventListener("submit", function (e) {
     validEmail(form.email) &&
     validMessage(form.textarea)
   ) {
-    formBg.style.display = "none";
-    main.setAttribute('aria-hidden', 'false');
-    formBg.setAttribute('aria-hidden', 'true');
-    formBtnOpen.focus();
-    
-    let searchParamsForm = new URLSearchParams(window.location.search);
+    modalForm.style.display = "none";
     console.log(
-      "ID = " +
-      searchParamsForm.get(`id`) +
-      " First = " +
-      searchParamsForm.get(`first`) +
-      " Last = " +
-      searchParamsForm.get(`last`) +
-      " Email = " +
-      searchParamsForm.get(`email`) +
-      " Textarea = " +
-      searchParamsForm.get(`textarea`)
-      );
-    e.preventDefault();
+      "prénom :" + first.value 
+      + "nom :" + last.value
+      + "email :" + email.value
+      + "message :" + textarea.value
+    )
+
+    // let searchParamsForm = new URLSearchParams(window.location.search);
+    // console.log(
+    //   "ID = " +
+    //     searchParamsForm.get(`id`) +
+    //     " First = " +
+    //     searchParamsForm.get(`first`) +
+    //     " Last = " +
+    //     searchParamsForm.get(`last`) +
+    //     " Email = " +
+    //     searchParamsForm.get(`email`) +
+    //     " Textarea = " +
+    //     searchParamsForm.get(`message`)
+    // );
+    // e.preventDefault();
   } else {
-    formBg.style.display = "block";
+    modalForm.style.display = "block";
     e.preventDefault();
   }
-}); */
-}
+});

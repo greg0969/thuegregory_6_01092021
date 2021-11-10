@@ -7,6 +7,7 @@ const displayPhotographerModel = (photographers, media) => {
   const photographerId = urlParam.get("id");
   const main = document.querySelector(".main");
   const priceSpan = document.getElementById("price");
+  const name = document.querySelector("#photographerName");
 
   /* on cherche le photographe selon l id recupere */
 
@@ -21,7 +22,7 @@ const displayPhotographerModel = (photographers, media) => {
   let photographerModel = new Photographer(selectedPhotographer);
   main.innerHTML = photographerModel.displayPhotographerCard();
   priceSpan.innerHTML = photographerModel.price +`€ / jour`;
-  
+  name.innerHTML = photographerModel.name;
   /* On affiche la gallerie de media du bon photographe */
 
   const mediaGallery = media.filter(
