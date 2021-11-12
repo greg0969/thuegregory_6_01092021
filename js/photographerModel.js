@@ -23,6 +23,7 @@ const displayPhotographerModel = (photographers, media) => {
   main.innerHTML = photographerModel.displayPhotographerCard();
   priceSpan.innerHTML = photographerModel.price +`€ / jour`;
   name.innerHTML = photographerModel.name;
+  
   /* On affiche la gallerie de media du bon photographe */
 
   const mediaGallery = media.filter(
@@ -83,7 +84,6 @@ function displayGallery(mediaGallery) {
 
 
 
-
 const init = async () => {
   const data = await getData();
   displayPhotographerModel(data.photographers, data.media);
@@ -91,5 +91,6 @@ const init = async () => {
   updateLike();
   lightbox(data.media);
   displayModalForm();
+  
 };
 init();

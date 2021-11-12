@@ -22,24 +22,26 @@ function displayModalForm() {
   
   // FIRSTNAME
   first.addEventListener("change", () => {
-    validFirst(this);
+    validFirst();
+    
   });
 
   // LASTNAME
   last.addEventListener("change", () => {
-    validLast(this);
+    validLast();
     
   });
 
   //  MAIL
   email.addEventListener("change", () => {
-  validEmail(this);
+    validEmail();
   });
 
   // MESSAGE
   textarea.addEventListener("change", () => {
-    validMessage(this);
+    validMessage();
   });
+  
 
 }
 
@@ -62,7 +64,7 @@ function validFirst() {
     return true;
   }
   if (!testFirst) {
-    errorMsg.style.display = "inline-block";
+    errorMsg.style.display = "block";
     errorMsg.innerHTML = "Vous devez entrer 2 caractères ou plus.";
     inputFirst.style.border = "red solid 3px";
     form.first.setAttribute("aria-invalid", "false");
@@ -144,6 +146,7 @@ function validMessage() {
     return false;
   }
 };
+
 
 //  VALIDATION BTN
 

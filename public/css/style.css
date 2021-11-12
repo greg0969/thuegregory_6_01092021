@@ -231,11 +231,9 @@ a {
   background-color: rgba(98, 100, 110, 0.294);
 }
 .modalForm__body {
-  width: 34%;
-  height: 73%;
+  width: 30%;
+  height: 685px;
   justify-content: center;
-  background: #DB8876;
-  border-radius: 5px;
   margin-top: 5em;
 }
 .modalForm__body__title {
@@ -260,9 +258,12 @@ a {
 .modalForm__body form {
   display: flex;
   flex-direction: column;
+  background: #DB8876;
+  border-radius: 5px;
+  padding-bottom: 6%;
 }
 .modalForm__body form .formData {
-  margin: 0.8em 8%;
+  margin: 10px 8%;
 }
 .modalForm__body form .formData .text-control {
   width: 100%;
