@@ -22,7 +22,11 @@
     margin-right: 5px;
   }
 
-
+  @media screen and (max-width: 540px) {
+    .tags {
+      font-size: 22px;
+    }
+  }
 
 .btn-submit {
   background: #901C1C;
