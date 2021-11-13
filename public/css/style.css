@@ -300,7 +300,6 @@ a {
 .card {
   display: flex;
   flex-direction: column;
-  width: 25%;
 }
 .card__img {
   width: 100%;
