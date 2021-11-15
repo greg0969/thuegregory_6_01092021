@@ -6,11 +6,11 @@
     display: flex;
     justify-content: space-around;
     margin: 0 100px 0 100px;
-    padding: 56px 0 56px 0;
+    padding: 5em 0;
     .btn-contact {
         background: #911C1C;
         border-radius: 5px;
-        height: 69px;
+        height: 5em;
         width: 170px;
         margin: 50px 0 0 -95px;
         cursor: pointer;
@@ -107,5 +107,102 @@
 }
 
 @media screen and (max-width: 540px) { 
-    
+    .card-details {
+        margin: 0;
+        .btn-contact {
+            width: 25%;
+            p {
+               font-size: 15px; 
+            }
+        }
+        &__content {
+         
+            &__tagline {
+                
+            }  
+            h1 {
+                font-size: 40px ;
+                font-weight: 400;
+                color: #D3573C;
+                margin: 0;
+            }
+            h2 {
+                font-size: 24px;
+                color: #901C1C ;
+                font-weight: 400;
+                margin-bottom: 10px;
+            }
+            .tag-style {
+                background-color: unset;
+            }
+        }
+        img {
+            width: 15em;
+            height: 15em;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 6px 6px 8px -6px rgba(0, 0, 0, 0.35);
+        }
+        
+    }
+    .gallerie {
+       
+        article {
+            
+            figure {
+                width: 40em;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 541px) and (max-width: 768px) {
+    .card-details {
+        margin: 2em;
+        .btn-contact {
+            width: 9em;
+            height: 5em;
+            margin: 0;
+            margin-left: -6em;
+            p {
+               font-size: 16px; 
+            }
+        }
+        &__content {
+            h1 {
+                font-size: 54px ;
+                margin: 0;
+                width: 5em;
+            }
+            h2 {
+                font-size: 24px;
+                
+            }
+            p {
+                font-size: 16px;
+            }
+        }
+        img {
+            width: 16em;
+            height: 16em;
+            
+        }
+        
+    }
+
+    .gallerie {
+        article {
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 40%;
+            margin: 1em 2.5em;
+            figure {
+                margin: 0;
+                img,video {
+                    height: 20em;
+                }
+                
+            }
+        }
+    }
 }

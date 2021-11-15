@@ -32,7 +32,7 @@ class Photographer {
           <ul class="card__content__tag tag-style">
               ${this.tags
                 .map(
-                  (tag) => `<li><a><span class="tag">#${tag}</span> </a></li>`
+                  (tag) => `<li><span class="tags tag-style" tag="${tag}">#${tag}</span></li>`
                 )
                 .join("")}
           </ul>
@@ -45,24 +45,25 @@ class Photographer {
     //html photographerModel
     return `
       <section class="card-details">
-      <div class="card-details__content">
-        <h1 class="card-details__title">${this.name}</h2>
-        <h2>${this.city}, ${this.country}</h3>
-        <p class="card-details__content__tagline">
-          ${this.tagline}
-        </p>
-        <ul class="card__content__tag tag-style">
-        ${this.tags
-          .map((tag) => `<li><a><span class="tag">#${tag}</span> </a></li>`)
-          .join("")}
-      </ul>
-        </div>
-        <button class="btn-contact" type="button" aria-role="contact">
-            <p>Contactez-moi</p>
-          </button>
-        <img src="public/images/photographes/Photographers ID Photos/${
-          this.portrait
-        }" alt="">
+        <div class="card-details__content">
+          <h1 class="card-details__title">${this.name}</h2>
+          <h2>${this.city}, ${this.country}</h3>
+          <p class="card-details__content__tagline">
+            ${this.tagline}
+          </p>
+          <ul class="card__content__tag tag-style">
+          ${this.tags
+            .map((tag) => `<li class="tags "><span>#${tag}</span></li>`)
+            .join("")}
+            
+        </ul>
+          </div>
+          <button class="btn-contact" type="button" aria-role="contact">
+              <p>Contactez-moi</p>
+            </button>
+          <img src="public/images/photographes/Photographers ID Photos/${
+            this.portrait
+          }" alt="">
         </section>
         
       `;

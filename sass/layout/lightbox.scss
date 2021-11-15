@@ -13,7 +13,7 @@
        justify-content: center;
        margin: 5.5em 3em 0 3em;
        width: 73%;
-       height: 800px;
+       height: 70em;
        
        &__content {
             width: 100%;
@@ -38,4 +38,39 @@
         margin-top: 0.5em;
     }
     
+}
+
+@media screen and (max-width: 540px) { 
+    .lightbox { 
+        &__container {
+            height: 60em;
+        } 
+        &__close {
+            margin-top: -12.5em;
+            margin-left: -1em;
+        }
+        .title {
+            font-size: 20px;
+            width: 71%;
+        }
+        
+    }
+}
+
+@media screen and (min-width: 541px) and (max-width: 768px) {
+    .lightbox {
+        &__container {
+            height: 63em;
+        } 
+        &__close {
+            margin-top: -13.2em;
+            margin-left: -0.8em;
+        }
+        .title {
+            font-size: 26px;
+            width: 74%;
+            
+        }
+        
+    }
 }

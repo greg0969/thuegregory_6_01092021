@@ -3,7 +3,7 @@ const displayPhotographerModel = (photographers, media) => {
 
   /* On récupère l'id dans l'url */ 
 
-  let urlParam = new URLSearchParams(window.location.search); 
+  let urlParam = new URLSearchParams(window.location.search);
   const photographerId = urlParam.get("id");
   const main = document.querySelector(".main");
   const priceSpan = document.getElementById("price");
@@ -83,7 +83,18 @@ function displayGallery(mediaGallery) {
 }
 
 
-
+//recup les tags de la page photographe et faire la fonction de tri des tags
+/*function filterByPhotographerCardTag() {
+  const photographerCardTags = document.querySelectorAll(".tags span");
+  photographerCardTags.forEach((photographerCardTag) => {
+    photographerCardTag.addEventListener("click",() => {  
+      currentTag = photographerCardTag.textContent;
+      console.log(currentTag)
+      location = "http://127.0.0.1:5500/index.html" + currentTag;
+    })
+  })
+}
+*/
 const init = async () => {
   const data = await getData();
   displayPhotographerModel(data.photographers, data.media);
@@ -91,6 +102,7 @@ const init = async () => {
   updateLike();
   lightbox(data.media);
   displayModalForm();
-  
+  //filterByPhotographerCardTag();
+
 };
 init();

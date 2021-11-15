@@ -12,6 +12,7 @@ h1 {
   line-height: 2.87rem;
   color: #901c1c;
   margin-left: 1%;
+  font-family: "DM Sans", sans-serif;
 }
 
 h2 {
@@ -19,6 +20,7 @@ h2 {
   line-height: 2.87rem;
   color: #d3573c;
   margin-bottom: 0;
+  font-family: "DM Sans", sans-serif;
 }
 
 h3 {
@@ -26,11 +28,13 @@ h3 {
   line-height: 1rem;
   margin-bottom: 3px;
   color: #901c1c;
+  font-family: "DM Sans", sans-serif;
 }
 
 p {
   font-size: 0.63rem;
   line-height: 0.81rem;
+  font-family: "DM Sans", sans-serif;
 }
 
 a {
@@ -58,7 +62,7 @@ a {
   list-style-type: none;
 }
 
-.tag {
+.tags {
   border: solid 0.5px #c4c4c4;
   border-radius: 11px;
   padding: 3px 5px;
@@ -114,6 +118,39 @@ a {
   margin-left: 20%;
 }
 
+@media screen and (max-width: 540px) {
+  .LikesAndPrice {
+    width: 45%;
+    height: 6em;
+  }
+  .LikesAndPrice #totalLikes {
+    font-size: 20px;
+    margin: 0 7%;
+  }
+  .LikesAndPrice #totalLikes i {
+    font-weight: bold;
+  }
+  .LikesAndPrice #price {
+    font-size: 20px;
+    margin: 0 7%;
+  }
+}
+@media screen and (min-width: 541px) and (max-width: 768px) {
+  .LikesAndPrice {
+    width: 35%;
+  }
+  .LikesAndPrice #totalLikes {
+    font-size: 22px;
+    margin: 0 7%;
+  }
+  .LikesAndPrice #totalLikes i {
+    font-weight: bold;
+  }
+  .LikesAndPrice #price {
+    font-size: 22px;
+    margin: 0 7%;
+  }
+}
 .sortBy {
   margin: 30px 7%;
   display: flex;
@@ -202,7 +239,7 @@ a {
   justify-content: center;
   margin: 5.5em 3em 0 3em;
   width: 73%;
-  height: 800px;
+  height: 70em;
 }
 .lightbox__container__content {
   width: 100%;
@@ -220,6 +257,32 @@ a {
   margin-top: 0.5em;
 }
 
+@media screen and (max-width: 540px) {
+  .lightbox__container {
+    height: 60em;
+  }
+  .lightbox__close {
+    margin-top: -12.5em;
+    margin-left: -1em;
+  }
+  .lightbox .title {
+    font-size: 20px;
+    width: 71%;
+  }
+}
+@media screen and (min-width: 541px) and (max-width: 768px) {
+  .lightbox__container {
+    height: 63em;
+  }
+  .lightbox__close {
+    margin-top: -13.2em;
+    margin-left: -0.8em;
+  }
+  .lightbox .title {
+    font-size: 26px;
+    width: 74%;
+  }
+}
 .modalForm {
   display: none;
 }
@@ -258,17 +321,17 @@ a {
   margin-left: 8%;
 }
 .modalForm__body__title #photographerName {
-  margin-top: 10px;
+  margin-top: 0.2em;
 }
 .modalForm__body form {
   display: flex;
   flex-direction: column;
   background: #DB8876;
-  border-radius: 5px;
+  border-radius: 0.5em;
   padding-bottom: 6%;
 }
 .modalForm__body form .formData {
-  margin: 10px 8%;
+  margin: 1em 8%;
 }
 .modalForm__body form .formData .text-control {
   width: 100%;
@@ -283,12 +346,36 @@ a {
 }
 .modalForm__body form .text-danger {
   display: none;
-  margin: 0;
+  margin: 0.5em 0;
 }
 .modalForm__body form .btn-submit {
   margin: 0.5em 8%;
 }
 
+@media screen and (max-width: 540px) {
+  .modalForm__body {
+    width: 75%;
+  }
+  .modalForm__body__title__close, .modalForm__body__title p {
+    font-size: 35px;
+  }
+  .modalForm__body form .formData .text-control {
+    width: 100%;
+    height: 30px;
+  }
+}
+@media screen and (min-width: 541px) and (max-width: 768px) {
+  .modalForm__body {
+    width: 60%;
+  }
+  .modalForm__body__title__close, .modalForm__body__title p {
+    font-size: 40px;
+  }
+  .modalForm__body form .formData .text-control {
+    width: 100%;
+    height: 30px;
+  }
+}
 /* MAIN */
 .main {
   display: flex;
@@ -390,7 +477,7 @@ a {
     font-size: 0.9rem;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 541px) and (max-width: 768px) {
   .card {
     width: 39%;
   }
@@ -413,12 +500,12 @@ a {
   display: flex;
   justify-content: space-around;
   margin: 0 100px 0 100px;
-  padding: 56px 0 56px 0;
+  padding: 5em 0;
 }
 .card-details .btn-contact {
   background: #911C1C;
   border-radius: 5px;
-  height: 69px;
+  height: 5em;
   width: 170px;
   margin: 50px 0 0 -95px;
   cursor: pointer;
@@ -503,4 +590,84 @@ a {
 }
 .gallerie article i {
   font-weight: bold;
+}
+
+@media screen and (max-width: 540px) {
+  .card-details {
+    margin: 0;
+  }
+  .card-details .btn-contact {
+    width: 25%;
+  }
+  .card-details .btn-contact p {
+    font-size: 15px;
+  }
+  .card-details__content h1 {
+    font-size: 40px;
+    font-weight: 400;
+    color: #D3573C;
+    margin: 0;
+  }
+  .card-details__content h2 {
+    font-size: 24px;
+    color: #901C1C;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+  .card-details__content .tag-style {
+    background-color: unset;
+  }
+  .card-details img {
+    width: 15em;
+    height: 15em;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 6px 6px 8px -6px rgba(0, 0, 0, 0.35);
+  }
+
+  .gallerie article figure {
+    width: 40em;
+  }
+}
+@media screen and (min-width: 541px) and (max-width: 768px) {
+  .card-details {
+    margin: 2em;
+  }
+  .card-details .btn-contact {
+    width: 9em;
+    height: 5em;
+    margin: 0;
+    margin-left: -6em;
+  }
+  .card-details .btn-contact p {
+    font-size: 16px;
+  }
+  .card-details__content h1 {
+    font-size: 54px;
+    margin: 0;
+    width: 5em;
+  }
+  .card-details__content h2 {
+    font-size: 24px;
+  }
+  .card-details__content p {
+    font-size: 16px;
+  }
+  .card-details img {
+    width: 16em;
+    height: 16em;
+  }
+
+  .gallerie article {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 40%;
+    margin: 1em 2.5em;
+  }
+  .gallerie article figure {
+    margin: 0;
+  }
+  .gallerie article figure img, .gallerie article figure video {
+    height: 20em;
+  }
 }

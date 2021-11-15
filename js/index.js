@@ -29,7 +29,7 @@ const displayPhotographer = (ArrayOfPhotographer) => {
 // Filtre les photographes par tags
 
 const filterTag = (arrayOfPhotographer) => {
-    const tags = document.querySelectorAll(".tags");
+    const tags = document.querySelectorAll(".tag-style");
     tags.forEach((tag) => {
       tag.addEventListener("click", (e) => {
         let currentTag = e.currentTarget.getAttribute("tag");
@@ -39,6 +39,7 @@ const filterTag = (arrayOfPhotographer) => {
         currentArrayOfPhotographer = [newArrayOfPhotographer];
         main.innerHTML = "" ;
         displayPhotographer(newArrayOfPhotographer);
+        main.style.justifyContent = "unset"
       });
     });
   };
@@ -47,6 +48,10 @@ const filterTag = (arrayOfPhotographer) => {
   await fetch("./data.json")
     .then((res) => res.json())
     .catch((error) => console.log("erreur"));
+
+
+
+
 
 
 const init = async() => {
