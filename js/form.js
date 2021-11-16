@@ -14,11 +14,26 @@ function displayModalForm() {
 
   });
 
+ 
+
+
+  //
+
   // ferme le modal
   const close = document.querySelector(".modalForm__body__title__close");
   close.addEventListener("click", () => {
     modalForm.style.display = "none";
   });
+
+   // Ferme avec la touche esc
+   
+   window.addEventListener("keydown", checkKeyPress, false);
+   function checkKeyPress(key) {
+     if(key.keyCode === 27) {
+       modalForm.style.display = "none";
+       modalForm.setAttribute("aria-hidden", "true");
+     }
+   }
   
   // FIRSTNAME
   first.addEventListener("change", () => {
