@@ -15,7 +15,7 @@ class Picture {
     return `
     <i class= "fas fa-chevron-left lightbox__previous"></i>
     <div class="lightbox__container">
-    <img class="lightbox__container__content media" data-src="public/images/photographes/${this.photographerId}/${this.image}" src="public/images/photographes/${this.photographerId}/${this.image}" alt="${this.alt}" />
+    <img class="lightbox__container__content media" aria-label="${this.type}" data-src="public/images/photographes/${this.photographerId}/${this.image}" src="public/images/photographes/${this.photographerId}/${this.image}" alt="${this.alt}" />
     </div>
     <i class="fas fa-chevron-right lightbox__next"></i>
     <i class="fas fa-times lightbox__close"></i>
@@ -26,13 +26,15 @@ class Picture {
     return `
         <article>
             <figure>
-                <img class="media" data-src="public/images/photographes/${this.photographerId}/${this.image}" aria-label="${this.title}" src="public/images/photographes/${this.photographerId}/${this.image}" alt="${this.alt}" />
+                <img class="media" data-src="public/images/photographes/${this.photographerId}/${this.image}" 
+                aria-label="${this.title}" src="public/images/photographes/${this.photographerId}/${this.image}" alt="${this.alt}" data-type="${this.type}" />
             
               <figcaption class="mediaDetail">
                 <p class="title">${this.title}</p>
+                <span id="responsivePrice">${this.price}€</span>
                 <div class="likes" aria-label="unliked">
-                <span class="numberOfLikes">${this.likes}</span>
-                    <i class="fa-heart far"></i>                 
+                  <span class="numberOfLikes">${this.likes}</span>
+                  <i class="fa-heart far"></i>                 
                 </div>
               </figcaption>
             </figure>
@@ -58,10 +60,10 @@ class Video {
     return `
     <i class= "fas fa-chevron-left lightbox__previous"></i>
     <div class="lightbox__container">
-    <video controls="controls" class="lightbox__container__content media" data-src="public/images/photographes/${this.photographerId}/${this.video}"> 
-            <source src="public/images/photographes/${this.photographerId}/${this.video}" type="${this.type}/mp4"  
-            role="button" aria-label="${this.title}">
-          </video>
+    <video controls="controls" class="lightbox__container__content media" aria-label="${this.type}" data-src="public/images/photographes/${this.photographerId}/${this.video}"> 
+      <source src="public/images/photographes/${this.photographerId}/${this.video}" type="${this.type}/mp4"  
+        role="button" aria-label="${this.title}">
+    </video>
     </div>
     <i class="fas fa-chevron-right lightbox__next"></i>
     <i class="fas fa-times lightbox__close"></i>
@@ -72,12 +74,14 @@ class Video {
     return `
     <article>
         <figure>
-          <video controls="controls" data-src="public/images/photographes/${this.photographerId}/${this.video}" class="media" aria-label="${this.title}"> 
+          <video controls="controls" data-src="public/images/photographes/${this.photographerId}/${this.video}" 
+          class="media" aria-label="${this.title}" data-type="${this.type}"> 
             <source src="public/images/photographes/${this.photographerId}/${this.video}" type="${this.type}/mp4"  
             role="button" >
           </video>
           <figcaption class="mediaDetail">
               <p class="title">${this.title}</p>
+              <span id="responsivePrice">${this.price}€</span>
               <div class="likes" aria-label="unliked">
                   <span class="numberOfLikes">${this.likes}</span>
                   <i class="fa-heart far"></i>                 

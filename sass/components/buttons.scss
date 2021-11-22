@@ -22,9 +22,45 @@
     margin-right: 5px;
   }
 
-  @media screen and (max-width: 540px) {
-    .tags {
-      font-size: 22px;
+  .btn-contact {
+    background: #911C1C;
+    border-radius: 5px;
+    height: 5em;
+    width: 170px;
+    margin: 50px 0 0 -95px;
+    cursor: pointer;
+    p {
+        color: white;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 26px;
+        text-align: center;
+    }
+}
+
+#responsiveContact {
+  display: none;
+}
+
+@media screen and (min-width: 250px) and (max-width: 540px) {
+  .tags {
+      font-size: 13px;
+      font-weight: 500;
+      padding: 1px 3px;
+    }
+
+    #responsiveContact {
+      display: initial;
+      position: sticky;
+      bottom: 2.5em;
+      width: 11em;
+      height: 2.3em;
+      margin: 0 27%;
+      border: none;
+      p {
+        font-size: 18px;
+        margin: 0;
+      }
     }
   }
 
@@ -43,5 +79,27 @@
   &:hover,&:focus {
     color: #000000;
     background-color: #D3573C;
+  }
+}
+
+@media screen and (min-width: 541px) and (max-width: 1439px) {
+  .tags {
+    font-size: 13px;
+    font-weight: 500;
+    padding: 1px 3px;
+  }
+
+  #responsiveContact {
+    display: initial;
+    position: sticky;
+    bottom: 2.5em;
+    width: 11em;
+    height: 2.3em;
+    margin: 0 41%;
+    border: none;
+    p {
+      font-size: 18px;
+      margin: 0;
+    }
   }
 }

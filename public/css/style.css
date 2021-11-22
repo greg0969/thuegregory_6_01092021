@@ -69,9 +69,45 @@ a {
   margin-right: 5px;
 }
 
-@media screen and (max-width: 540px) {
+.btn-contact {
+  background: #911C1C;
+  border-radius: 5px;
+  height: 5em;
+  width: 170px;
+  margin: 50px 0 0 -95px;
+  cursor: pointer;
+}
+.btn-contact p {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 26px;
+  text-align: center;
+}
+
+#responsiveContact {
+  display: none;
+}
+
+@media screen and (min-width: 250px) and (max-width: 540px) {
   .tags {
-    font-size: 22px;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 1px 3px;
+  }
+
+  #responsiveContact {
+    display: initial;
+    position: sticky;
+    bottom: 2.5em;
+    width: 11em;
+    height: 2.3em;
+    margin: 0 27%;
+    border: none;
+  }
+  #responsiveContact p {
+    font-size: 18px;
+    margin: 0;
   }
 }
 .btn-submit {
@@ -92,6 +128,27 @@ a {
   background-color: #D3573C;
 }
 
+@media screen and (min-width: 541px) and (max-width: 1439px) {
+  .tags {
+    font-size: 13px;
+    font-weight: 500;
+    padding: 1px 3px;
+  }
+
+  #responsiveContact {
+    display: initial;
+    position: sticky;
+    bottom: 2.5em;
+    width: 11em;
+    height: 2.3em;
+    margin: 0 41%;
+    border: none;
+  }
+  #responsiveContact p {
+    font-size: 18px;
+    margin: 0;
+  }
+}
 .LikesAndPrice {
   display: flex;
   float: right;
@@ -118,37 +175,14 @@ a {
   margin-left: 20%;
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (min-width: 250px) and (max-width: 540px) {
   .LikesAndPrice {
-    width: 45%;
-    height: 6em;
-  }
-  .LikesAndPrice #totalLikes {
-    font-size: 20px;
-    margin: 0 7%;
-  }
-  .LikesAndPrice #totalLikes i {
-    font-weight: bold;
-  }
-  .LikesAndPrice #price {
-    font-size: 20px;
-    margin: 0 7%;
+    display: none;
   }
 }
-@media screen and (min-width: 541px) and (max-width: 768px) {
+@media screen and (min-width: 541px) and (max-width: 1439px) {
   .LikesAndPrice {
-    width: 35%;
-  }
-  .LikesAndPrice #totalLikes {
-    font-size: 22px;
-    margin: 0 7%;
-  }
-  .LikesAndPrice #totalLikes i {
-    font-weight: bold;
-  }
-  .LikesAndPrice #price {
-    font-size: 22px;
-    margin: 0 7%;
+    display: none;
   }
 }
 .sortBy {
@@ -238,7 +272,7 @@ a {
   display: flex;
   justify-content: center;
   margin: 5.5em 3em 0 3em;
-  width: 73%;
+  width: 78%;
   height: 70em;
 }
 .lightbox__container__content {
@@ -260,17 +294,28 @@ a {
 @media screen and (max-width: 540px) {
   .lightbox__container {
     height: 60em;
+    margin: 1em;
+  }
+  .lightbox__container__content {
+    width: 100%;
+    object-fit: cover;
+    height: 30%;
+    align-self: center;
   }
   .lightbox__close {
-    margin-top: -12.5em;
-    margin-left: -1em;
+    margin-top: -5.6em;
+    margin-left: -0.6em;
   }
   .lightbox .title {
     font-size: 20px;
     width: 71%;
+    margin: -23em 1.5em 0 0;
+  }
+  .lightbox i {
+    font-size: 30px;
   }
 }
-@media screen and (min-width: 541px) and (max-width: 768px) {
+@media screen and (min-width: 541px) and (max-width: 1439px) {
   .lightbox__container {
     height: 63em;
   }
@@ -352,19 +397,27 @@ a {
   margin: 0.5em 8%;
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (min-width: 250px) and (max-width: 540px) {
   .modalForm__body {
     width: 75%;
   }
   .modalForm__body__title__close, .modalForm__body__title p {
-    font-size: 35px;
+    font-size: 25px;
+  }
+  .modalForm__body form .formData label {
+    font-size: 14px;
   }
   .modalForm__body form .formData .text-control {
     width: 100%;
     height: 30px;
   }
+  .modalForm__body .btn-submit {
+    width: 10.6em;
+    height: 2.2em;
+    align-self: center;
+  }
 }
-@media screen and (min-width: 541px) and (max-width: 768px) {
+@media screen and (min-width: 541px) and (max-width: 1439px) {
   .modalForm__body {
     width: 60%;
   }
@@ -427,23 +480,20 @@ a {
   padding: 3px 5px;
 }
 
-@media screen and (max-width: 540px) {
-  html {
-    width: 540px;
-  }
-
+@media screen and (min-width: 250px) and (max-width: 540px) {
   body {
     max-width: 540px;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
   }
   body .header {
     display: flex;
     flex-direction: row;
+    margin: 3.5em 0 0 1.7em;
   }
   body .header .logo img {
-    width: 20em;
-    margin: 0 9em;
+    width: 9em;
   }
   body .header .main-nav {
     width: 100%;
@@ -477,7 +527,7 @@ a {
     font-size: 0.9rem;
   }
 }
-@media screen and (min-width: 541px) and (max-width: 768px) {
+@media screen and (min-width: 541px) and (max-width: 1439px) {
   .card {
     width: 39%;
   }
@@ -495,27 +545,12 @@ a {
   }
 }
 .card-details {
-  background: #FAFAFA;
+  background: #fafafa;
   border-radius: 5px;
   display: flex;
   justify-content: space-around;
   margin: 0 100px 0 100px;
   padding: 5em 0;
-}
-.card-details .btn-contact {
-  background: #911C1C;
-  border-radius: 5px;
-  height: 5em;
-  width: 170px;
-  margin: 50px 0 0 -95px;
-  cursor: pointer;
-}
-.card-details .btn-contact p {
-  color: white;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 26px;
-  text-align: center;
 }
 .card-details__content__tagline {
   margin-top: 0;
@@ -523,12 +558,12 @@ a {
 .card-details__content h1 {
   font-size: 64px;
   font-weight: 400;
-  color: #D3573C;
+  color: #d3573c;
   margin-left: 0;
 }
 .card-details__content h2 {
   font-size: 24px;
-  color: #901C1C;
+  color: #901c1c;
   font-weight: 400;
   margin-bottom: 10px;
 }
@@ -579,10 +614,14 @@ a {
   display: flex;
   justify-content: space-between;
 }
+.gallerie article figcaption #responsivePrice {
+  display: none;
+}
 .gallerie article figcaption .likes:hover {
   cursor: pointer;
 }
-.gallerie article .mediaDetail, .gallerie article .mediaDetail p {
+.gallerie article .mediaDetail,
+.gallerie article .mediaDetail p {
   font-size: 24px;
   color: #901c1c;
   font-weight: 400;
@@ -592,82 +631,142 @@ a {
   font-weight: bold;
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (min-width: 250px) and (max-width: 540px) {
   .card-details {
-    margin: 0;
+    margin: 0 0 0 1.7em;
+    justify-content: unset;
+    padding: 2em 0 0;
+    background-color: unset;
   }
   .card-details .btn-contact {
+    display: none;
     width: 25%;
   }
   .card-details .btn-contact p {
     font-size: 15px;
   }
+  .card-details__content__tagline {
+    margin: 0;
+  }
   .card-details__content h1 {
-    font-size: 40px;
+    font-size: 36px;
     font-weight: 400;
-    color: #D3573C;
+    color: #d3573c;
     margin: 0;
   }
   .card-details__content h2 {
-    font-size: 24px;
-    color: #901C1C;
+    font-size: 13px;
+    line-height: 25px;
+    color: #901c1c;
     font-weight: 400;
-    margin-bottom: 10px;
+    margin: 0;
   }
   .card-details__content .tag-style {
     background-color: unset;
+    margin-top: 7px;
   }
   .card-details img {
-    width: 15em;
-    height: 15em;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 6px 6px 8px -6px rgba(0, 0, 0, 0.35);
+    width: 8.5em;
+    height: 8.5em;
   }
 
+  .sortBy {
+    display: none;
+  }
+
+  .gallerie {
+    position: relative;
+  }
   .gallerie article figure {
-    width: 40em;
+    width: 100%;
+    margin: 0;
+  }
+  .gallerie article figure img {
+    width: 30em;
+    height: 17em;
+  }
+  .gallerie article figure video {
+    width: 30em;
+    height: 17em;
+  }
+  .gallerie article figure .mediaDetail {
+    width: 96%;
+    margin-left: 2%;
+  }
+  .gallerie article figure .mediaDetail #responsivePrice,
+.gallerie article figure .mediaDetail .title,
+.gallerie article figure .mediaDetail .likes {
+    font-size: 14px;
+  }
+  .gallerie article figure .mediaDetail #responsivePrice {
+    display: unset;
   }
 }
 @media screen and (min-width: 541px) and (max-width: 768px) {
   .card-details {
-    margin: 2em;
+    margin: 0 0 0 1.7em;
+    justify-content: unset;
+    padding: 2em 0 0;
+    background-color: unset;
   }
-  .card-details .btn-contact {
-    width: 9em;
-    height: 5em;
+  .card-details__content__tagline {
     margin: 0;
-    margin-left: -6em;
-  }
-  .card-details .btn-contact p {
-    font-size: 16px;
   }
   .card-details__content h1 {
-    font-size: 54px;
+    font-size: 36px;
+    font-weight: 400;
+    color: #d3573c;
     margin: 0;
-    width: 5em;
   }
   .card-details__content h2 {
-    font-size: 24px;
+    font-size: 13px;
+    line-height: 25px;
+    color: #901c1c;
+    font-weight: 400;
+    margin: 0;
   }
-  .card-details__content p {
-    font-size: 16px;
+  .card-details__content .tag-style {
+    background-color: unset;
+    margin-top: 7px;
   }
   .card-details img {
-    width: 16em;
-    height: 16em;
+    width: 8.5em;
+    height: 8.5em;
   }
 
+  .sortBy {
+    display: none;
+  }
+
+  .gallerie {
+    position: relative;
+  }
   .gallerie article {
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 40%;
-    margin: 1em 2.5em;
+    width: 85%;
   }
   .gallerie article figure {
     margin: 0;
+    width: unset;
   }
-  .gallerie article figure img, .gallerie article figure video {
-    height: 20em;
+  .gallerie article figure .mediaDetail {
+    width: 96%;
+    margin-left: 2%;
+  }
+  .gallerie article figure .mediaDetail #responsivePrice,
+.gallerie article figure .mediaDetail .title,
+.gallerie article figure .mediaDetail .likes {
+    font-size: 14px;
+  }
+  .gallerie article figure .mediaDetail #responsivePrice {
+    display: unset;
+  }
+}
+@media screen and (min-width: 541px) and (max-width: 1439px) {
+  .btn-contact {
+    display: none;
+    width: 25%;
+  }
+  .btn-contact p {
+    font-size: 15px;
   }
 }

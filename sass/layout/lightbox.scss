@@ -12,7 +12,7 @@
        display: flex;
        justify-content: center;
        margin: 5.5em 3em 0 3em;
-       width: 73%;
+       width: 78%;
        height: 70em;
        
        &__content {
@@ -44,20 +44,32 @@
     .lightbox { 
         &__container {
             height: 60em;
+            margin: 1em;
+            &__content {
+                width: 100%;
+                object-fit: cover;
+                height: 30%;
+                align-self: center;
+                
+            }
         } 
         &__close {
-            margin-top: -12.5em;
-            margin-left: -1em;
+            margin-top: -5.6em;
+            margin-left: -0.6em;
         }
         .title {
             font-size: 20px;
             width: 71%;
+            margin: -23em 1.5em 0 0;
+        }
+        i {
+            font-size: 30px;
         }
         
     }
 }
 
-@media screen and (min-width: 541px) and (max-width: 768px) {
+@media screen and (min-width: 541px) and (max-width: 1439px) {
     .lightbox {
         &__container {
             height: 63em;

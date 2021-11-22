@@ -70,28 +70,36 @@
 }
 
 
-@media screen and (max-width: 540px) { 
+@media screen and (min-width: 250px) and (max-width: 540px) {
     .modalForm {
         &__body {
             width: 75%;
             &__title {
                 &__close, p {
-                    font-size: 35px;
+                    font-size: 25px;
                 }
             }
             form {
                 .formData {
+                    label {
+                        font-size: 14px;
+                    }
                     .text-control {
                         width: 100%;
                         height: 30px;
                     }
                 }
             }
+            .btn-submit {
+                width: 10.6em;
+                height: 2.2em;
+                align-self: center;
+            }
         }
     }
 }
 
-@media screen and (min-width: 541px) and (max-width: 768px) {
+@media screen and (min-width: 541px) and (max-width: 1439px) {
     .modalForm {
         &__body {
             width: 60%;

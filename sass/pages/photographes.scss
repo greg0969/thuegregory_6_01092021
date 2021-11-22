@@ -1,208 +1,242 @@
-
-
 .card-details {
-    background: #FAFAFA;
-    border-radius: 5px; 
-    display: flex;
-    justify-content: space-around;
-    margin: 0 100px 0 100px;
-    padding: 5em 0;
-    .btn-contact {
-        background: #911C1C;
-        border-radius: 5px;
-        height: 5em;
-        width: 170px;
-        margin: 50px 0 0 -95px;
-        cursor: pointer;
-        p {
-            color: white;
-            font-size: 20px;
-            font-weight: 500;
-            line-height: 26px;
-            text-align: center;
-        }
+  background: #fafafa;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 100px 0 100px;
+  padding: 5em 0;
+
+  &__content {
+    &__tagline {
+      margin-top: 0;
     }
-    &__content {
-     
-        &__tagline {
-            margin-top: 0;
-        }  
-        h1 {
-            font-size: 64px ;
-            font-weight: 400;
-            color: #D3573C;
-            margin-left: 0;
-        }
-        h2 {
-            font-size: 24px;
-            color: #901C1C ;
-            font-weight: 400;
-            margin-bottom: 10px;
-        }
-        .tag-style {
-            background-color: unset;
-        }
+    h1 {
+      font-size: 64px;
+      font-weight: 400;
+      color: #d3573c;
+      margin-left: 0;
     }
-    img {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        object-fit: cover;
-        box-shadow: 6px 6px 8px -6px rgba(0, 0, 0, 0.35);
+    h2 {
+      font-size: 24px;
+      color: #901c1c;
+      font-weight: 400;
+      margin-bottom: 10px;
     }
-    
+    .tag-style {
+      background-color: unset;
+    }
+  }
+  img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 6px 6px 8px -6px rgba(0, 0, 0, 0.35);
+  }
 }
 
 .main-photographe {
-    display: unset;
+  display: unset;
 }
 
 .gallerie {
+  display: flex;
+  flex-wrap: wrap;
+  //gap: 23px 95px;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  article {
     display: flex;
-    flex-wrap: wrap;
-    //gap: 23px 95px;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    article {
-        display: flex;
-        flex-direction: column;
-        figure {
-            width: 350px;
-            
-            img {
-                width: 100%;
-                height: 300px;
-                object-fit: cover;
-                border-radius: 5px;
-                cursor: pointer;
-              }
-              video {
-                width: 100%;
-                height: 300px;
-                object-fit: cover;
-                border-radius: 5px;
-                cursor: pointer;
-              }
-        }
-        figcaption {  
-            display: flex;
-            justify-content: space-between;
-            
-            .likes:hover {
-                cursor: pointer;
-            }
-        }
-        .mediaDetail, .mediaDetail p {
-            font-size: 24px;
-            color: #901c1c;
-            font-weight: 400;
-            align-items: center;
-        }
-        i {
-            font-weight: bold;
-        }
+    flex-direction: column;
+    figure {
+      width: 350px;
+
+      img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      video {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 5px;
+        cursor: pointer;
+      }
     }
-    
+    figcaption {
+      display: flex;
+      justify-content: space-between;
+      #responsivePrice {
+        display: none;
+      }
+      .likes:hover {
+        cursor: pointer;
+      }
+    }
+    .mediaDetail,
+    .mediaDetail p {
+      font-size: 24px;
+      color: #901c1c;
+      font-weight: 400;
+      align-items: center;
+    }
+    i {
+      font-weight: bold;
+    }
+  }
 }
 
-@media screen and (max-width: 540px) { 
-    .card-details {
+@media screen and (min-width: 250px) and (max-width: 540px) {
+  .card-details {
+    margin: 0 0 0 1.7em;
+    justify-content: unset;
+    padding: 2em 0 0;
+    background-color: unset;
+    .btn-contact {
+      display: none;
+      width: 25%;
+
+      p {
+        font-size: 15px;
+      }
+    }
+    &__content {
+      &__tagline {
         margin: 0;
-        .btn-contact {
-            width: 25%;
-            p {
-               font-size: 15px; 
-            }
-        }
-        &__content {
-         
-            &__tagline {
-                
-            }  
-            h1 {
-                font-size: 40px ;
-                font-weight: 400;
-                color: #D3573C;
-                margin: 0;
-            }
-            h2 {
-                font-size: 24px;
-                color: #901C1C ;
-                font-weight: 400;
-                margin-bottom: 10px;
-            }
-            .tag-style {
-                background-color: unset;
-            }
-        }
+      }
+      h1 {
+        font-size: 36px;
+        font-weight: 400;
+        color: #d3573c;
+        margin: 0;
+      }
+      h2 {
+        font-size: 13px;
+        line-height: 25px;
+        color: #901c1c;
+        font-weight: 400;
+        margin: 0;
+      }
+      .tag-style {
+        background-color: unset;
+        margin-top: 7px;
+      }
+    }
+    img {
+      width: 8.5em;
+      height: 8.5em;
+    }
+  }
+
+  .sortBy {
+    display: none;
+  }
+
+  .gallerie {
+    position: relative;
+    article {
+      figure {
+        width: 100%;
+        margin: 0;
         img {
-            width: 15em;
-            height: 15em;
-            border-radius: 50%;
-            object-fit: cover;
-            box-shadow: 6px 6px 8px -6px rgba(0, 0, 0, 0.35);
+          width: 30em;
+          height: 17em;
         }
-        
-    }
-    .gallerie {
-       
-        article {
-            
-            figure {
-                width: 40em;
-            }
+        video {
+          width: 30em;
+          height: 17em;
         }
+        .mediaDetail {
+          width: 96%;
+          margin-left: 2%;
+          #responsivePrice,
+          .title,
+          .likes {
+            font-size: 14px;
+          }
+          #responsivePrice {
+            display: unset;
+          }
+        }
+      }
     }
+  }
 }
 
 @media screen and (min-width: 541px) and (max-width: 768px) {
-    .card-details {
-        margin: 2em;
-        .btn-contact {
-            width: 9em;
-            height: 5em;
-            margin: 0;
-            margin-left: -6em;
-            p {
-               font-size: 16px; 
-            }
-        }
-        &__content {
-            h1 {
-                font-size: 54px ;
-                margin: 0;
-                width: 5em;
-            }
-            h2 {
-                font-size: 24px;
-                
-            }
-            p {
-                font-size: 16px;
-            }
-        }
-        img {
-            width: 16em;
-            height: 16em;
-            
-        }
-        
+  .card-details {
+    margin: 0 0 0 1.7em;
+    justify-content: unset;
+    padding: 2em 0 0;
+    background-color: unset;
+    
+    &__content {
+      &__tagline {
+        margin: 0;
+      }
+      h1 {
+        font-size: 36px;
+        font-weight: 400;
+        color: #d3573c;
+        margin: 0;
+      }
+      h2 {
+        font-size: 13px;
+        line-height: 25px;
+        color: #901c1c;
+        font-weight: 400;
+        margin: 0;
+      }
+      .tag-style {
+        background-color: unset;
+        margin-top: 7px;
+      }
     }
+    img {
+      width: 8.5em;
+      height: 8.5em;
+    }
+  }
 
-    .gallerie {
-        article {
-            flex-direction: row;
-            flex-wrap: wrap;
-            width: 40%;
-            margin: 1em 2.5em;
-            figure {
-                margin: 0;
-                img,video {
-                    height: 20em;
-                }
-                
-            }
+  .sortBy {
+    display: none;
+  }
+
+  .gallerie {
+    position: relative;
+    
+    article {
+      width: 85%;
+      figure {
+        margin: 0;
+        width: unset;
+        .mediaDetail {
+          width: 96%;
+          margin-left: 2%;
+          #responsivePrice,
+          .title,
+          .likes {
+            font-size: 14px;
+          }
+          #responsivePrice {
+            display: unset;
+          }
         }
+      }
     }
+  }
+}
+@media screen and (min-width: 541px) and (max-width: 1439px) { 
+  .btn-contact {
+    display: none;
+    width: 25%;
+
+    p {
+      font-size: 15px;
+    }
+  }
 }

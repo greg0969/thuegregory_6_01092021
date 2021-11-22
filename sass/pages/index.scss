@@ -53,21 +53,21 @@
   }
   
   
-  @media screen and (max-width: 540px) {
-    html {
-      width: 540px;
-    }
+  @media screen and (min-width: 250px) and (max-width: 540px) {
+
     body {
       max-width: 540px ;
       display: flex ;
       flex-direction: column;
+      overflow-x: hidden;
       .header {
         display: flex;
         flex-direction: row;
+        margin: 3.5em 0 0 1.7em;
         .logo {
           img {
-            width: 20em;
-            margin: 0 9em;
+            width: 9em;
+            
           }
         }
         .main-nav {
@@ -109,7 +109,7 @@
     }
   } 
   
-  @media screen and (min-width: 541px) and (max-width: 768px) {
+  @media screen and (min-width: 541px) and (max-width: 1439px) {
     .card {
       width: 39%;
       &__content {

@@ -26,40 +26,14 @@
     }
 }
 
-@media screen and (max-width: 540px) { 
+@media screen and (min-width: 250px) and (max-width: 540px) {
     .LikesAndPrice {
-        width: 45%;
-        height: 6em;
-        #totalLikes {
-            
-            font-size: 20px;
-            margin: 0 7%;
-            i {
-                font-weight: bold;
-            }
-        }
-        #price {
-            
-            font-size: 20px;
-            margin: 0 7%; 
-        }
+        display: none;
     }
 }
 
-@media screen and (min-width: 541px) and (max-width: 768px) {
+@media screen and (min-width: 541px) and (max-width: 1439px) {
     .LikesAndPrice {
-        width: 35%;
-        #totalLikes {
-            
-            font-size: 22px;
-            margin: 0 7%;
-            i {
-                font-weight: bold;
-            }
-        }
-        #price {
-            font-size: 22px;
-            margin: 0 7%; 
-        }
-    } 
+        display: none;
+    }
 }

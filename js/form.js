@@ -1,21 +1,22 @@
 function displayModalForm() {
-  const contactBtn = document.querySelector(".btn-contact");
+  const contactBtn = document.querySelectorAll(".btn-contact");
   const modalForm = document.querySelector(".modalForm");
   const first = document.getElementById("first");
   const last = document.getElementById("last");
   const email = document.getElementById("email");
   const textarea = document.getElementById("message");
   
-
+  
   // affiche le modal
-  contactBtn.addEventListener("click", () => {
-    modalForm.style.display = "block";
 
-
-  });
-
- 
-
+  contactBtn.forEach((contact) => {
+    contact.addEventListener("click", () => {
+      modalForm.style.display = "block";
+  
+  
+    });
+  })
+  
 
   //
 
@@ -26,7 +27,7 @@ function displayModalForm() {
   });
 
    // Ferme avec la touche esc
-   
+
    window.addEventListener("keydown", checkKeyPress, false);
    function checkKeyPress(key) {
      if(key.keyCode === 27) {
@@ -151,49 +152,48 @@ function validMessage() {
   if (testTextarea) {
     errorMsg.style.display = "none";
     inputTextarea.style.border = "green solid 3px";
-    form.textarea.setAttribute("aria-invalid", "true");
     return true;
   } 
   if (!testTextarea) {
     inputTextarea.style.border = "red solid 3px";
     errorMsg.style.display = "inline-block";
-    form.textarea.setAttribute("aria-invalid", "false");
     return false;
   }
 };
 
 
 //  VALIDATION BTN
-
-form.addEventListener("submit", function (e) {
+form.addEventListener("submit", () => {
   if (
     validFirst(form.first) &&
     validLast(form.last) &&
     validEmail(form.email) &&
     validMessage(form.textarea)
   ) {
-    modalForm.style.display = "none";
-    console.log(
+    /*console.log(
       "prénom :" + first.value 
       + "nom :" + last.value
       + "email :" + email.value
       + "message :" + textarea.value
-    )
+    );
+    */
+    
 
-    // let searchParamsForm = new URLSearchParams(window.location.search);
-    // console.log(
-    //   "ID = " +
-    //     searchParamsForm.get(`id`) +
-    //     " First = " +
-    //     searchParamsForm.get(`first`) +
-    //     " Last = " +
-    //     searchParamsForm.get(`last`) +
-    //     " Email = " +
-    //     searchParamsForm.get(`email`) +
-    //     " Textarea = " +
-    //     searchParamsForm.get(`message`)
-    // );
-    // e.preventDefault();
+     let searchParamsForm = new URLSearchParams(window.location.search);
+     console.log(
+       "ID = " +
+         searchParamsForm.get(`id`) +
+         " First = " +
+         searchParamsForm.get(`first`) +
+         " Last = " +
+         searchParamsForm.get(`last`) +
+         " Email = " +
+         searchParamsForm.get(`email`) +
+         " Textarea = " +
+         searchParamsForm.get(`message`)
+     );
+     e.preventDefault();
+     modalForm.style.display = "none";
   } else {
     modalForm.style.display = "block";
     e.preventDefault();
