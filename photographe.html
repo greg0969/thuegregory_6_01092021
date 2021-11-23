@@ -1,131 +1,108 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fisheye</title>
-    <script src="https://kit.fontawesome.com/f7a1214a9b.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap"
-      rel="stylesheet"/>
-    <link rel="stylesheet" href="public/css/style.css" />
-  </head>
 
-  <body>
-    <section class="modalForm">
-      <div class="background">  
-        <div class="modalForm__body">
-          <form
-            name="contact"
-            action="photographe.html"
-            method="get">
-          
-            <div class="modalForm__body__title">
-              <p>Contactez-moi</p>
-              <i class="fas fa-times modalForm__body__title__close"></i>
-              <p id="photographerName"></p>
-              
-              
-            </div>
-  
-            <div
-              class="formData">
-              <label for="first">Prénom</label><br>
-              <input
-                class="text-control"
-                type="text"
-                id="first"
-                name="first"
-                minlength="2"                                  
-              /><br>
-              <p class="text-danger firstError">Vous devez entrer 2 caractères ou plus.</p>
-              
-            </div>
-            <div
-              class="formData">
-              <label for="last">Nom</label><br>
-              <input
-                class="text-control"
-                type="text"
-                id="last"
-                name="last"
-                                    
-              /><br>
-              <p class="text-danger lastError">Vous devez entrer 2 caractères ou plus.</p>
-            </div>
-            <div
-              class="formData">
-              <label for="email">E-mail</label><br>
-              <input
-                class="text-control"
-                type="email"
-                id="email"
-                name="email"
-              /><br>
-              <p class="text-danger mailError">Vous devez entrer une adresse mail valide.</p>
-            </div>
-  
-            <div class="formData">
-              <label for="message">Votre message</label><br>
-              <textarea class="text-control" name="message" id="message" rows="10" cols="50"></textarea>
-              <br>
-              <p class="text-danger msgError">Vous devez entrer 2 caractères ou plus.</p>
-            </div>
-            <button class="btn-submit button" id="submit-btn" type="button" aria-role="envoyer">Envoyer</button>
-            
-          </form>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fisheye</title>
+  <script src="https://kit.fontawesome.com/f7a1214a9b.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="public/css/style.css" />
+</head>
+
+<body>
+  <section class="modalForm">
+    <div class="background">
+      <div class="modalForm__body">
+        <form name="contact" action="photographe.html" method="get">
+          <div class="modalForm__body__title">
+            <p>Contactez-moi</p>
+            <i class="fas fa-times modalForm__body__title__close"></i>
+            <p id="photographerName"></p>
+          </div>
+
+          <div class="formData">
+            <label for="first">Prénom</label><br />
+            <input class="text-control" type="text" id="first" name="first" minlength="2" /><br />
+            <p class="text-danger firstError">
+              Vous devez entrer 2 caractères ou plus.
+            </p>
+          </div>
+          <div class="formData">
+            <label for="last">Nom</label><br />
+            <input class="text-control" type="text" id="last" name="last" /><br />
+            <p class="text-danger lastError">
+              Vous devez entrer 2 caractères ou plus.
+            </p>
+          </div>
+          <div class="formData">
+            <label for="email">E-mail</label><br />
+            <input class="text-control" type="email" id="email" name="email" /><br />
+            <p class="text-danger mailError">
+              Vous devez entrer une adresse mail valide.
+            </p>
+          </div>
+
+          <div class="formData">
+            <label for="message">Votre message</label><br />
+            <textarea class="text-control" name="message" id="message" rows="10" cols="50"></textarea>
+            <br />
+            <p class="text-danger msgError">
+              Vous devez entrer 2 caractères ou plus.
+            </p>
+          </div>
+          <button class="btn-submit button" id="submit-btn" type="button" aria-role="envoyer">
+            Envoyer
+          </button>
+        </form>
       </div>
-    </section>
-    <div id="content-container">
-      <header class="header">
-        <a href="index.html" class="logo">
-          <img src="public/images/logo/logo.png" alt="Logo Fisheye" />
-        </a>
-      </header>
-      
-      <main class="main main-photographe">
-      </main>
-      
-      <span class="sortBy">
-        <p>Trier par</p>
-        <div class="sortDiv">
-          <label>
-            <select>
-              <option>Popularité</option>
-              <option>Date</option>
-              <option>Titre</option>
-            </select>
-          </label>
-        </div>
-      </span>
-      <section class="gallerie"></section>
-      
-      <section class="LikesAndPrice">
-        <span id="totalLikes"> </span>
-        <span id="price"></span>
-      </section>
-      
-      <button class="btn-contact" id ="responsiveContact" type="button" aria-role="contact">
-        <p>Contactez-moi</p>
-      </button>
     </div>
-  
-    <section aria-hidden="true" class="lightbox">
+  </section>
+  <div id="content-container">
+    <header class="header">
+      <a href="index.html" class="logo">
+        <img src="public/images/logo/logo.png" alt="Logo Fisheye" />
+      </a>
+    </header>
+
+    <main class="main main-photographe"></main>
+
+    <span class="sortBy">
+      <p>Trier par</p>
+      <div class="sortDiv">
+        <label>
+          <select>
+            <option>Popularité</option>
+            <option>Date</option>
+            <option>Titre</option>
+          </select>
+        </label>
+      </div>
+    </span>
+    <section class="gallerie"></section>
+
+    <section class="LikesAndPrice">
+      <span id="totalLikes"> </span>
+      <span id="price"></span>
     </section>
-  </body>
-  
-  <script src="js/fetchApi.js"></script>
-  <script src="js/likes.js "></script>
-  <script src="js/media.js "></script>
-  <script src="js/photographer.js"></script>
-  <script src="js/photographerModel.js"></script>
-  <script src="js/form.js "></script>
-  <script src="js/lightbox.js "></script>
+
+    <button class="btn-contact" id="responsiveContact" type="button" aria-role="contact">
+      <p>Contactez-moi</p>
+    </button>
+  </div>
+
+  <section aria-hidden="true" class="lightbox"></section>
+</body>
+
+<script src="js/fetchApi.js"></script>
+<script src="js/likes.js "></script>
+<script src="js/media.js "></script>
+<script src="js/photographer.js"></script>
+<script src="js/photographerModel.js"></script>
+<script src="js/form.js "></script>
+<script src="js/lightbox.js "></script>
+
 </html>
