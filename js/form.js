@@ -161,41 +161,26 @@ function validMessage() {
   }
 };
 
-
+const submitBtn = document.querySelector("#submit-btn");
 //  VALIDATION BTN
-form.addEventListener("submit", () => {
+submitBtn.addEventListener("click", () => {
+  //e.preventDefault();
   if (
     validFirst(form.first) &&
     validLast(form.last) &&
     validEmail(form.email) &&
     validMessage(form.textarea)
   ) {
-    /*console.log(
-      "prénom :" + first.value 
-      + "nom :" + last.value
-      + "email :" + email.value
-      + "message :" + textarea.value
+    console.log(
+      "prénom : " + first.value 
+      + " nom : " + last.value
+      + " email : " + email.value
+      + " message : " + message.value
     );
-    */
-    
-
-     let searchParamsForm = new URLSearchParams(window.location.search);
-     console.log(
-       "ID = " +
-         searchParamsForm.get(`id`) +
-         " First = " +
-         searchParamsForm.get(`first`) +
-         " Last = " +
-         searchParamsForm.get(`last`) +
-         " Email = " +
-         searchParamsForm.get(`email`) +
-         " Textarea = " +
-         searchParamsForm.get(`message`)
-     );
-     e.preventDefault();
      modalForm.style.display = "none";
-  } else {
+  } 
+  else {
     modalForm.style.display = "block";
-    e.preventDefault();
+    //e.preventDefault();
   }
 });

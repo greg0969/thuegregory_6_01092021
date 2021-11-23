@@ -71,11 +71,18 @@ a {
 
 .btn-contact {
   background: #911C1C;
+  border: none;
   border-radius: 5px;
   height: 5em;
   width: 170px;
   margin: 50px 0 0 -95px;
   cursor: pointer;
+}
+.btn-contact:hover {
+  background: #DB8876;
+}
+.btn-contact:hover p {
+  color: black;
 }
 .btn-contact p {
   color: white;

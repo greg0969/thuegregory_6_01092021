@@ -143,12 +143,11 @@ function lightbox(media) {
           console.log(galleryLink[nextIndex].getAttribute("data-type"))
           
           if ( galleryLink[nextIndex].getAttribute("data-type") == "video") {
-            console.log("vid")
             
-            videoSrc.setAttribute("data-src", links[nextIndex].getAttribute("src"));
-            videoSrc.setAttribute("src", links[nextIndex].getAttribute("src"));
-            videoSrc.setAttribute("alt", links[nextIndex].getAttribute("alt"));
-            videoSrc.setAttribute("aria-label", links[nextIndex].getAttribute("alt"));
+            // videoSrc.setAttribute("data-src", links[nextIndex].getAttribute("src"));
+            // videoSrc.setAttribute("src", links[nextIndex].getAttribute("src"));
+            // videoSrc.setAttribute("alt", links[nextIndex].getAttribute("alt"));
+            // videoSrc.setAttribute("aria-label", links[nextIndex].getAttribute("alt"));
           
           }
           else {

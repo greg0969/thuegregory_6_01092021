@@ -24,18 +24,25 @@
 
   .btn-contact {
     background: #911C1C;
+    border: none;
     border-radius: 5px;
     height: 5em;
     width: 170px;
     margin: 50px 0 0 -95px;
     cursor: pointer;
+    &:hover {
+      background: #DB8876;
+      p {
+        color: black;
+      }
+    }
     p {
         color: white;
         font-size: 20px;
         font-weight: 500;
         line-height: 26px;
-        text-align: center;
-    }
+        text-align: center;       
+      }
 }
 
 #responsiveContact {
