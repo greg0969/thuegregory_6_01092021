@@ -59,7 +59,7 @@ class Photographer {
         </ul>
           </div>
           <button class="btn-contact" type="button" aria-role="contact">
-              <p>Contactez-moi</p>
+              Contactez-moi
             </button>
           <img src="public/images/photographes/Photographers ID Photos/${
             this.portrait

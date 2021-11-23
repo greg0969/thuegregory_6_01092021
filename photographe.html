@@ -19,7 +19,7 @@
       <div class="modalForm__body">
         <form name="contact" action="photographe.html" method="get">
           <div class="modalForm__body__title">
-            <p>Contactez-moi</p>
+            <h1>Contactez-moi</h1>
             <i class="fas fa-times modalForm__body__title__close"></i>
             <p id="photographerName"></p>
           </div>
@@ -54,7 +54,7 @@
               Vous devez entrer 2 caractères ou plus.
             </p>
           </div>
-          <button class="btn-submit button" id="submit-btn" type="button" aria-role="envoyer">
+          <button class="btn-submit button" id="submit-btn" type="button">
             Envoyer
           </button>
         </form>
@@ -70,8 +70,8 @@
 
     <main class="main main-photographe"></main>
 
-    <span class="sortBy">
-      <p>Trier par</p>
+    <div class="sortBy">
+      Trier par
       <div class="sortDiv">
         <label>
           <select>
@@ -81,28 +81,29 @@
           </select>
         </label>
       </div>
-    </span>
-    <section class="gallerie"></section>
+    </div>
+    <div class="gallerie"></div>
 
-    <section class="LikesAndPrice">
+    <div class="LikesAndPrice">
       <span id="totalLikes"> </span>
       <span id="price"></span>
-    </section>
+    </div>
 
-    <button class="btn-contact" id="responsiveContact" type="button" aria-role="contact">
-      <p>Contactez-moi</p>
+    <button class="btn-contact" id="responsiveContact" type="button">
+      Contactez-moi
     </button>
   </div>
 
-  <section aria-hidden="true" class="lightbox"></section>
-</body>
+  <div aria-hidden="true" class="lightbox"></div>
 
-<script src="js/fetchApi.js"></script>
-<script src="js/likes.js "></script>
-<script src="js/media.js "></script>
-<script src="js/photographer.js"></script>
-<script src="js/photographerModel.js"></script>
-<script src="js/form.js "></script>
-<script src="js/lightbox.js "></script>
+
+  <script src="js/fetchApi.js"></script>
+  <script src="js/likes.js "></script>
+  <script src="js/media.js "></script>
+  <script src="js/photographer.js"></script>
+  <script src="js/photographerModel.js"></script>
+  <script src="js/form.js "></script>
+  <script src="js/lightbox.js "></script>
+</body>
 
 </html>

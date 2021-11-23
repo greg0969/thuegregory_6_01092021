@@ -77,19 +77,15 @@ a {
   width: 170px;
   margin: 50px 0 0 -95px;
   cursor: pointer;
-}
-.btn-contact:hover {
-  background: #DB8876;
-}
-.btn-contact:hover p {
-  color: black;
-}
-.btn-contact p {
   color: white;
   font-size: 20px;
   font-weight: 500;
   line-height: 26px;
   text-align: center;
+}
+.btn-contact:hover {
+  background: #DB8876;
+  color: black;
 }
 
 #responsiveContact {
@@ -367,10 +363,12 @@ a {
   margin-top: 0.5em;
   cursor: pointer;
 }
-.modalForm__body__title p {
+.modalForm__body__title p, .modalForm__body__title h1 {
   font-size: 45px;
   width: 80%;
   margin-left: 8%;
+  color: black;
+  font-weight: unset;
 }
 .modalForm__body__title #photographerName {
   margin-top: 0.2em;
@@ -587,6 +585,10 @@ a {
 
 .main-photographe {
   display: unset;
+}
+
+.sortBy {
+  align-items: center;
 }
 
 .gallerie {
