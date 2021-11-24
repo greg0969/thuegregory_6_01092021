@@ -1,19 +1,4 @@
 
-// faire apparaitre "passer au contenu" au scroll
-
-const displayPasserAuContenu = () => {
-    window.addEventListener("scoll",() => {
-        const passerAuContenu = document.querySelector(".passer-au-contenu");
-        const scrolled = window.scrollY;
-        if (scrolled > 50) {
-            passerAuContenu.style.display = "block";
-        }
-        else {
-            passerAuContenu.style.display = "none";
-        }
-    });
-};
-
 // Affiche les photographes 
 
 const displayPhotographer = (ArrayOfPhotographer) => {
@@ -55,7 +40,6 @@ const filterTag = (arrayOfPhotographer) => {
 
 
 const init = async() => {
-    displayPasserAuContenu();
     const data = await getData();
     displayPhotographer(data.photographers);
     filterTag(data.photographers);

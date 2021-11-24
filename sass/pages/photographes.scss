@@ -41,6 +41,11 @@
 
 .sortBy {
   align-items: center;
+  .sortDiv {
+    select, option {
+      cursor: pointer;  
+    }
+  }
 }
 
 .gallerie {
@@ -83,7 +88,7 @@
     }
     .mediaDetail,
     .mediaDetail p {
-      font-size: 24px;
+      font-size: 19px;
       color: #901c1c;
       font-weight: 400;
       align-items: center;
@@ -105,7 +110,7 @@
       width: 25%;
 
       p {
-        font-size: 15px;
+        font-size: 10px;
       }
     }
     &__content {
@@ -113,7 +118,7 @@
         margin: 0;
       }
       h1 {
-        font-size: 36px;
+        font-size: 30px;
         font-weight: 400;
         color: #d3573c;
         margin: 0;
@@ -131,8 +136,9 @@
       }
     }
     img {
-      width: 8.5em;
-      height: 8.5em;
+      width: 6.5em;
+      height: 6.5em;
+      margin-left: -10%;
     }
   }
 
@@ -142,19 +148,21 @@
 
   .gallerie {
     position: relative;
+    width: 90%;
     article {
       figure {
         width: 100%;
         margin: 0;
         img {
-          width: 30em;
-          height: 17em;
+          width: 24em;
+          height: 14em;
         }
         video {
-          width: 30em;
-          height: 17em;
+          width: 24em;
+          height: 14em;
         }
         .mediaDetail {
+          font-size: 20px;
           width: 96%;
           margin-left: 2%;
           #responsivePrice,
@@ -174,7 +182,6 @@
 @media screen and (min-width: 541px) and (max-width: 768px) {
   .card-details {
     margin: 0 0 0 1.7em;
-    justify-content: unset;
     padding: 2em 0 0;
     background-color: unset;
     
@@ -221,11 +228,7 @@
         .mediaDetail {
           width: 96%;
           margin-left: 2%;
-          #responsivePrice,
-          .title,
-          .likes {
-            font-size: 14px;
-          }
+          
           #responsivePrice {
             display: unset;
           }

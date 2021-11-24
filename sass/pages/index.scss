@@ -6,6 +6,28 @@
     justify-content: space-between;
   }
   
+  #content-container {
+    width: fit-content;
+  }
+
+  #ancre {
+    cursor: pointer;
+    div {
+      position: sticky;
+      top: 1.1em;
+      text-align: center ;
+      padding: 15px 0;
+      margin: 0 43%;
+      width: 15%;
+      color: black;
+      font-size: 18px;
+      font-weight: 700;
+      background-color: #DB8876;
+      border-radius: 5px;
+      border: none;
+    }
+  }
+
   .card {
     display: flex;
     flex-direction: column;
@@ -56,14 +78,18 @@
   @media screen and (min-width: 250px) and (max-width: 540px) {
 
     body {
-      max-width: 540px ;
       display: flex ;
       flex-direction: column;
       overflow-x: hidden;
+      #ancre {
+        display: none;
+        
+      }
       .header {
         display: flex;
         flex-direction: row;
         margin: 3.5em 0 0 1.7em;
+        width: 85%;
         .logo {
           img {
             width: 9em;
@@ -85,6 +111,7 @@
         }
       }
       main {
+        width: 90%;
         .card {
           width: 100%;
           &__content {

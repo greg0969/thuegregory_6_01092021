@@ -26,7 +26,7 @@
     background: #911C1C;
     border: none;
     border-radius: 5px;
-    height: 5em;
+    height: 4em;
     width: 170px;
     margin: 50px 0 0 -95px;
     cursor: pointer;
@@ -47,7 +47,7 @@
 
 @media screen and (min-width: 250px) and (max-width: 540px) {
   .tags {
-      font-size: 13px;
+      font-size: 10px;
       font-weight: 500;
       padding: 1px 3px;
     }
@@ -56,9 +56,8 @@
       display: initial;
       position: sticky;
       bottom: 2.5em;
-      width: 11em;
       height: 2.3em;
-      margin: 0 27%;
+      margin: 0 20%;
       border: none;
       p {
         font-size: 18px;
