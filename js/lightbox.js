@@ -160,7 +160,6 @@ function lightbox(media) {
         let index;
 
         for (let i = 0; i < links.length; i++) {
-          //console.log(links[i].getAttribute("data-src"));
           if (src == links[i].getAttribute("data-src")) {
             index = i;
 
@@ -169,7 +168,7 @@ function lightbox(media) {
         galleryLink = links;
         let nextIndex = index + 1;
 
-        if (nextIndex == links.length) {
+        if (nextIndex == galleryLink.length) {
           nextIndex = 0;
 
         }
@@ -216,7 +215,6 @@ function lightbox(media) {
           let index;
 
           for (let i = 0; i < links.length; i++) {
-            //console.log(links[i].getAttribute("data-src"));
             if (src == links[i].getAttribute("data-src")) {
               index = i;
 
@@ -227,7 +225,7 @@ function lightbox(media) {
 
           if (nextIndex == links.length) {
             nextIndex = 0;
-
+            
           }
 
 
@@ -255,6 +253,7 @@ function lightbox(media) {
             lightboxMedia.setAttribute("aria-label", links[nextIndex].getAttribute("alt"));
             title.innerHTML = links[nextIndex].getAttribute("alt");
             galleryLink[i].setAttribute("data-src", links[nextIndex].getAttribute("src"));
+            
           }
         }
       }
