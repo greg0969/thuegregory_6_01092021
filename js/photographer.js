@@ -20,7 +20,7 @@ class Photographer {
     } "class="card__img">
         <img src="public/images/photographes/Photographers ID Photos/${
           this.portrait
-        }" alt="">
+        }" alt="${this.portrait}">
           <h2>${this.name}</h2>
         </a>
         <figcaption class="card__content">
