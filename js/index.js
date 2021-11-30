@@ -18,10 +18,13 @@ const filterTag = (arrayOfPhotographer) => {
     tags.forEach((tag) => {
       tag.addEventListener("click", (e) => {
         let currentTag = e.currentTarget.getAttribute("tag");
+        console.log(currentTag)
+        console.log(arrayOfPhotographer)
         const newArrayOfPhotographer = arrayOfPhotographer.filter((div) =>
           div.tags.includes(currentTag)
         );
         currentArrayOfPhotographer = [newArrayOfPhotographer];
+        console.log(currentArrayOfPhotographer)
         main.innerHTML = "" ;
         displayPhotographer(newArrayOfPhotographer);
         main.style.justifyContent = "unset"
