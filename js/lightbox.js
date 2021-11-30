@@ -78,7 +78,7 @@ function lightbox(media) {
              src=${links[prevIndex].getAttribute("src")} 
              alt="${links[prevIndex].getAttribute("aria-label")}" /> `;
           title.innerHTML = links[prevIndex].getAttribute("alt");
-          links[i].setAttribute("src", links[prevIndex].getAttribute("src"));
+          //links[i].setAttribute("src", links[prevIndex].getAttribute("src"));
         }
       });
 
@@ -123,7 +123,7 @@ function lightbox(media) {
              src=${links[prevIndex].getAttribute("src")} 
              alt="${links[prevIndex].getAttribute("aria-label")}" /> `;
             title.innerHTML = links[prevIndex].getAttribute("alt");
-            links[i].setAttribute("src", links[prevIndex].getAttribute("src"));
+            //links[i].setAttribute("src", links[prevIndex].getAttribute("src"));
           }
         }
       }
@@ -166,9 +166,8 @@ function lightbox(media) {
           src="${links[nextIndex].getAttribute("src")}" 
           alt="${links[nextIndex].getAttribute("aria-label")}" /> `;
           title.innerHTML = links[nextIndex].getAttribute("alt");
-          links[i].setAttribute("src", links[nextIndex].getAttribute("src"));
-          console.log("gallerie :" , links[i])
-          console.log("lightbox :" , lightboxMedia[i])
+          //links[i].setAttribute("src", links[nextIndex].getAttribute("src"));
+          
         }
       });
 
@@ -221,7 +220,7 @@ function lightbox(media) {
             lightboxMedia.setAttribute("aria-label", links[nextIndex].getAttribute("alt"));
 
             title.innerHTML = links[nextIndex].getAttribute("alt");
-            galleryLink[i].setAttribute("src", links[nextIndex].getAttribute("src"));
+            //galleryLink[i].setAttribute("src", links[nextIndex].getAttribute("src"));
           }
         }
       }
