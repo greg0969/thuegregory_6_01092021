@@ -29,16 +29,16 @@ const displayPhotographerModel = (photographers, media) => {
     (element) => element.photographerId == photographerId
   );
   displayGallery(mediaGallery);
-
+  
   /* permet d'afficher les medias trié selon l option selectionnée */
-  //changer document
   const options = document.querySelector("select");
   options.addEventListener("change", (e) => {
+    
     const filter = filterByOption(mediaGallery, e.target.value);
     const relevantMediaDiv = document.querySelector(".gallerie");
     relevantMediaDiv.innerHTML = "";
     displayGallery(filter);
-    lightbox();
+    lightbox(media);
   });
 };
 
@@ -72,8 +72,8 @@ function displayGallery(mediaGallery) {
   const relevantMediaDiv = document.querySelector(".gallerie");
   mediaGallery.forEach((media) => {
     const relevantMedia = new MediasFactory(media);
-
     relevantMediaDiv.innerHTML += relevantMedia.displayRelevantMedia();
+    
   });
 }
 

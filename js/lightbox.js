@@ -11,6 +11,7 @@ function lightbox(media) {
       const lightboxContainer = document.querySelector(".lightbox");
 
       let name = links[i].getAttribute("aria-label");
+      
       let selectedMedia = media.find((oneMedia) => {
         const mediaSrc = oneMedia.title.toString();
         return mediaSrc === name;
