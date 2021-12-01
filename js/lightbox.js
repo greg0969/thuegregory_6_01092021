@@ -11,7 +11,7 @@ function lightbox(media) {
       const lightboxContainer = document.querySelector(".lightbox");
 
       let name = links[i].getAttribute("aria-label");
-      
+
       let selectedMedia = media.find((oneMedia) => {
         const mediaSrc = oneMedia.title.toString();
         return mediaSrc === name;
@@ -132,9 +132,7 @@ function lightbox(media) {
       const next = document.querySelector(".lightbox__next");
       next.addEventListener("click", () => {
         let src = document.querySelector(".lightbox__container__content");
-        let lightboxMedia = document.querySelectorAll(".lightbox__container__content");
-
-        src = links[i].getAttribute("src");
+        let lightboxMedia = document.querySelector(".lightbox__container__content");
         let title = document.querySelector("#lightboxTitle");
         let index;
         for (let i = 0; i < links.length; i++) {
@@ -148,27 +146,32 @@ function lightbox(media) {
           nextIndex = 0;
 
         }
-        if (links[nextIndex].getAttribute("data-type") == "video") {
-          
+        console.log(links[i + 1].getAttribute("src"))
+
+        if (links[i + 1].getAttribute("data-type") == "video") {
+          console.log("type :", links[i + 1].getAttribute("data-type"))
           const lightboxContainer = document.querySelector(".lightbox__container");
           lightboxContainer.innerHTML = ` <video controls="controls" class="lightbox__container__content " 
-          src="${links[nextIndex].getAttribute("src")}" type="${links[nextIndex].getAttribute("data-type")}/mp4"  
-          role="button" aria-label="${links[nextIndex].getAttribute("aria-label")}">     
+          src="${links[i + 1].getAttribute("src")}" type="${links[i + 1].getAttribute("data-type")}/mp4"  
+          role="button" aria-label="${links[i + 1].getAttribute("aria-label")}">     
           </video> `;
+          title.innerHTML = links[i + 1].getAttribute("aria-label");
+          lightboxMedia.setAttribute("src", links[i++].getAttribute("src"))
+          //console.log("src :",lightboxMedia)
 
-          title.innerHTML = links[nextIndex].getAttribute("aria-label");
-          //links[i].setAttribute("src", links[nextIndex].getAttribute("src"));
         }
 
-        if (links[nextIndex].getAttribute("data-type") == "img") {
+        if (links[i + 1].getAttribute("data-type") == "img") {
+          console.log("type :", links[i + 1].getAttribute("data-type"))
+
           const lightboxContainer = document.querySelector(".lightbox__container");
           lightboxContainer.innerHTML = ` <img class="lightbox__container__content " 
-          aria-label="${links[nextIndex].getAttribute("data-type")}"
-          src="${links[nextIndex].getAttribute("src")}" 
-          alt="${links[nextIndex].getAttribute("aria-label")}" /> `;
-          title.innerHTML = links[nextIndex].getAttribute("alt");
-          //links[i].setAttribute("src", links[nextIndex].getAttribute("src"));
-          
+          aria-label="${links[i + 1].getAttribute("data-type")}"
+          src="${links[i + 1].getAttribute("src")}" 
+          alt="${links[i + 1].getAttribute("aria-label")}" /> `;
+          title.innerHTML = links[i + 1].getAttribute("alt");
+          lightboxMedia.setAttribute("src", links[i++].getAttribute("src"))
+          //console.log("gallerie :",links[i ++])
         }
       });
 
@@ -178,50 +181,46 @@ function lightbox(media) {
       function nextMedia(key) {
         if (key.keyCode === 39) {
           let src = document.querySelector(".lightbox__container__content");
-          const lightboxMedia = document.querySelector(".lightbox__container__content");
-          src = links[i].getAttribute("src");
+          let lightboxMedia = document.querySelector(".lightbox__container__content");
           let title = document.querySelector("#lightboxTitle");
-
-
           let index;
-
           for (let i = 0; i < links.length; i++) {
             if (src == links[i].getAttribute("src")) {
               index = i;
-
             }
           }
-          galleryLink = links;
           let nextIndex = index + 1;
 
           if (nextIndex == links.length) {
             nextIndex = 0;
 
           }
+          console.log(links[i + 1].getAttribute("src"))
 
-
-          if (galleryLink[nextIndex].getAttribute("data-type") == "video") {
+          if (links[i + 1].getAttribute("data-type") == "video") {
+            console.log("type :", links[i + 1].getAttribute("data-type"))
             const lightboxContainer = document.querySelector(".lightbox__container");
+            lightboxContainer.innerHTML = ` <video controls="controls" class="lightbox__container__content " 
+          src="${links[i + 1].getAttribute("src")}" type="${links[i + 1].getAttribute("data-type")}/mp4"  
+          role="button" aria-label="${links[i + 1].getAttribute("aria-label")}">     
+          </video> `;
+            title.innerHTML = links[i + 1].getAttribute("aria-label");
+            lightboxMedia.setAttribute("src", links[i++].getAttribute("src"))
+            //console.log("src :",lightboxMedia)
 
-            lightboxContainer.innerHTML = ` <video controls="controls" class="lightbox__container__content media" aria-label=""> 
-              <source src="${links[nextIndex].getAttribute("data-src")}" type="${galleryLink[nextIndex].getAttribute("data-type")}/mp4"  
-                role="button" aria-label="${links[nextIndex].getAttribute("aria-label")}">
-            </video> `;
-            title.innerHTML = links[nextIndex].getAttribute("aria-label");
-            galleryLink[i].setAttribute("src", links[nextIndex].getAttribute("src"));
           }
 
-          if (galleryLink[nextIndex].getAttribute("data-type") == "img") {
+          if (links[i + 1].getAttribute("data-type") == "img") {
+            console.log("type :", links[i + 1].getAttribute("data-type"))
+
             const lightboxContainer = document.querySelector(".lightbox__container");
-            lightboxContainer.innerHTML = ` <img class="lightbox__container__content media" aria-label="${galleryLink[nextIndex].getAttribute("data-type")}"
-              src=${links[nextIndex].getAttribute("src")} alt="${links[nextIndex].getAttribute("aria-label")}" /> `;
-
-            lightboxMedia.setAttribute("src", links[nextIndex].getAttribute("src"));
-            lightboxMedia.setAttribute("alt", links[nextIndex].getAttribute("alt"));
-            lightboxMedia.setAttribute("aria-label", links[nextIndex].getAttribute("alt"));
-
-            title.innerHTML = links[nextIndex].getAttribute("alt");
-            //galleryLink[i].setAttribute("src", links[nextIndex].getAttribute("src"));
+            lightboxContainer.innerHTML = ` <img class="lightbox__container__content " 
+          aria-label="${links[i + 1].getAttribute("data-type")}"
+          src="${links[i + 1].getAttribute("src")}" 
+          alt="${links[i + 1].getAttribute("aria-label")}" /> `;
+            title.innerHTML = links[i + 1].getAttribute("alt");
+            lightboxMedia.setAttribute("src", links[i++].getAttribute("src"))
+            //console.log("gallerie :",links[i ++])
           }
         }
       }
