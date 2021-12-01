@@ -149,6 +149,7 @@ function lightbox(media) {
 
         }
         if (links[nextIndex].getAttribute("data-type") == "video") {
+          
           const lightboxContainer = document.querySelector(".lightbox__container");
           lightboxContainer.innerHTML = ` <video controls="controls" class="lightbox__container__content " 
           src="${links[nextIndex].getAttribute("src")}" type="${links[nextIndex].getAttribute("data-type")}/mp4"  
@@ -156,7 +157,7 @@ function lightbox(media) {
           </video> `;
 
           title.innerHTML = links[nextIndex].getAttribute("aria-label");
-          links[i].setAttribute("src", links[nextIndex].getAttribute("src"));
+          //links[i].setAttribute("src", links[nextIndex].getAttribute("src"));
         }
 
         if (links[nextIndex].getAttribute("data-type") == "img") {
