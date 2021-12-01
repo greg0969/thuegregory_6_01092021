@@ -87,45 +87,43 @@ function lightbox(media) {
       function previousMedia(key) {
         if (key.keyCode === 37) {
           let src = document.querySelector(".lightbox__container__content");
-          let lightboxMedia = document.querySelector(".lightbox__container__content");
-          let title = document.querySelector("#lightboxTitle");
-          let index;
+        let lightboxMedia = document.querySelector(".lightbox__container__content");
+        let title = document.querySelector("#lightboxTitle");
+        let index;
 
-          for (let i = 0; i < links.length; i++) {
-            if (src == links[i].getAttribute("src")) {
-              index = i;
-            }
+        for (let i = 0; i < links.length; i++) {
+          if (src == links[i].getAttribute("src")) {
+            index = i;
           }
-          const lastIndex = links.length;
-          let prevIndex = index - 1;
+        }
+        const lastIndex = links.length;
+        let prevIndex = index - 1;
 
-          if (prevIndex == 0) {
-            prevIndex = lastIndex;
-          }
+        if (prevIndex == 0) {
+          prevIndex = lastIndex;
+        }
 
-          if (links[i - 1].getAttribute("data-type") == "video") {
-            console.log("type :", links[i - 1].getAttribute("data-type"))
-            const lightboxContainer = document.querySelector(".lightbox__container");
-            lightboxContainer.innerHTML = ` <video controls="controls" class="lightbox__container__content " 
+        if (links[i - 1].getAttribute("data-type") == "video") {
+          console.log("type :", links[i - 1].getAttribute("data-type"))
+          const lightboxContainer = document.querySelector(".lightbox__container");
+          lightboxContainer.innerHTML = ` <video controls="controls" class="lightbox__container__content " 
           src="${links[i - 1].getAttribute("src")}" type="${links[i - 1].getAttribute("data-type")}/mp4"  
           role="button" aria-label="${links[i - 1].getAttribute("aria-label")}">     
           </video> `;
-            title.innerHTML = links[i - 1].getAttribute("aria-label");
-            lightboxMedia.setAttribute("src", links[i--].getAttribute("src"))
-            //console.log("src :",lightboxMedia)
+          title.innerHTML = links[i - 1].getAttribute("aria-label");
+         
+        }
 
-          }
-
-          if (links[i - 1].getAttribute("data-type") == "img") {
-            console.log("type :", links[i - 1].getAttribute("data-type"))
-            const lightboxContainer = document.querySelector(".lightbox__container");
-            lightboxContainer.innerHTML = ` <img class="lightbox__container__content " 
+        if (links[i - 1].getAttribute("data-type") == "img") {
+          console.log("type :", links[i - 1].getAttribute("data-type"))
+          const lightboxContainer = document.querySelector(".lightbox__container");
+          lightboxContainer.innerHTML = ` <img class="lightbox__container__content " 
           aria-label="${links[i - 1].getAttribute("data-type")}"
           src="${links[i - 1].getAttribute("src")}" 
           alt="${links[i - 1].getAttribute("aria-label")}" /> `;
-            title.innerHTML = links[i - 1].getAttribute("alt");
-            lightboxMedia.setAttribute("src", links[i--].getAttribute("src"))
-          }
+          title.innerHTML = links[i - 1].getAttribute("alt");
+        }
+        lightboxMedia.setAttribute("src", links[i--].getAttribute("src"))
         }
       }
 
