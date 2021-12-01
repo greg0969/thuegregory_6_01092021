@@ -15,7 +15,7 @@ class Picture {
     return `
     <i class= "fas fa-chevron-left lightbox__previous"></i>
     <div class="lightbox__container">
-    <img class="lightbox__container__content " aria-label="${this.type}" data-src="public/images/photographes/${this.photographerId}/${this.image}" src="public/images/photographes/${this.photographerId}/${this.image}" alt="${this.alt}" />
+    <img class="lightbox__container__content " aria-label="${this.type}" src="public/images/photographes/${this.photographerId}/${this.image}" alt="${this.alt}" />
     </div>
     <i class="fas fa-chevron-right lightbox__next"></i>
     <i class="fas fa-times lightbox__close"></i>
