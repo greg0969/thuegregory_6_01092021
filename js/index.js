@@ -17,7 +17,7 @@ const filterTag = (arrayOfPhotographer) => {
     const tags = document.querySelectorAll(".tag-style");
     tags.forEach((tag) => {
       tag.addEventListener("click", (e) => {
-        let currentTag = e.currentTarget.getAttribute("tag");
+        let currentTag = e.currentTarget.getAttribute("data-tag");
         console.log(currentTag)
         console.log(arrayOfPhotographer)
         const newArrayOfPhotographer = arrayOfPhotographer.filter((div) =>
