@@ -700,6 +700,7 @@ a {
   .gallerie {
     position: relative;
     width: 90%;
+    margin: auto;
   }
   .gallerie article figure {
     width: 100%;
@@ -764,6 +765,7 @@ a {
 
   .gallerie {
     position: relative;
+    margin: auto;
   }
   .gallerie article {
     width: 85%;
