@@ -360,7 +360,7 @@ a {
 .modalForm__body__title #photographerName {
   margin-top: 0.2em;
   font-size: 40px;
-  margin: 0 0 1em 0.9em;
+  margin: 0 0 1em 8%;
 }
 .modalForm__body form {
   display: flex;
