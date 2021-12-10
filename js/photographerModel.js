@@ -20,7 +20,6 @@ const displayPhotographerModel = (photographers, media) => {
   let photographerModel = new Photographer(selectedPhotographer);
   main.innerHTML = photographerModel.displayPhotographerCard();
   priceSpan.innerHTML = photographerModel.price + `€ / jour`;
-
   name.innerHTML = photographerModel.name;
 
   /* On affiche la gallerie de media du bon photographe */
@@ -39,6 +38,7 @@ const displayPhotographerModel = (photographers, media) => {
     relevantMediaDiv.innerHTML = "";
     displayGallery(filter);
     lightbox(media);
+    updateLike();
   });
 };
 

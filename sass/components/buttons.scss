@@ -53,11 +53,13 @@
     }
 
     #responsiveContact {
-      display: initial;
+      display: flex;
+      align-items: center;
+      padding: 1em;
       position: sticky;
       bottom: 2.5em;
       height: 2.3em;
-      margin: 0 20%;
+      margin: auto;
       border: none;
       p {
         font-size: 18px;
@@ -92,12 +94,14 @@
   }
 
   #responsiveContact {
-    display: initial;
+    display: flex;
+    align-items: center;
+    padding: 1em 2.2em;
     position: sticky;
     bottom: 2.5em;
     width: 11em;
     height: 2.3em;
-    margin: 0 41%;
+    margin: auto;
     border: none;
     p {
       font-size: 18px;

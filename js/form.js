@@ -5,14 +5,14 @@ function displayModalForm() {
   const last = document.getElementById("last");
   const email = document.getElementById("email");
   const textarea = document.getElementById("message");
-  
+  const responsiveBtn = document.getElementById("responsiveContact");
   
   // affiche le modal
 
   contactBtn.forEach((contact) => {
     contact.addEventListener("click", () => {
       modalForm.style.display = "block";
-  
+      responsiveBtn.style.display = "none";
   
     });
   })
@@ -24,6 +24,7 @@ function displayModalForm() {
   const close = document.querySelector(".modalForm__body__title__close");
   close.addEventListener("click", () => {
     modalForm.style.display = "none";
+    responsiveBtn.style.display = "flex";
   });
 
    // Ferme avec la touche esc
@@ -32,6 +33,7 @@ function displayModalForm() {
    function checkKeyPress(key) {
      if(key.keyCode === 27) {
        modalForm.style.display = "none";
+       responsiveBtn.style.display = "flex";
        modalForm.setAttribute("aria-hidden", "true");
      }
    }

@@ -7,6 +7,7 @@
   padding: 5em 0;
 
   &__content {
+
     &__tagline {
       margin-top: 0;
     }
@@ -24,6 +25,7 @@
     }
     .tag-style {
       background-color: unset;
+      justify-content: flex-start;
     }
   }
   img {
@@ -114,6 +116,7 @@
       }
     }
     &__content {
+      margin-right: 2em;
       &__tagline {
         margin: 0;
       }
@@ -133,12 +136,12 @@
       .tag-style {
         background-color: unset;
         margin-top: 7px;
+        justify-content: flex-start;
       }
     }
     img {
       width: 6.5em;
       height: 6.5em;
-      margin-left: -10%;
     }
   }
 

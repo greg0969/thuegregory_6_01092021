@@ -38,6 +38,8 @@
             }
             #photographerName {
                 margin-top: 0.2em;
+                font-size: 40px;
+                margin: 0 0 1em 0.9em;
             } 
         }
         form {
@@ -77,8 +79,11 @@
         &__body {
             width: 75%;
             &__title {
+                h1 {
+                    font-size: 27px;
+                }
                 &__close, p {
-                    font-size: 25px;
+                    font-size: 20px;
                 }
             }
             form {

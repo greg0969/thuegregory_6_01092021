@@ -100,11 +100,13 @@ a {
   }
 
   #responsiveContact {
-    display: initial;
+    display: flex;
+    align-items: center;
+    padding: 1em;
     position: sticky;
     bottom: 2.5em;
     height: 2.3em;
-    margin: 0 20%;
+    margin: auto;
     border: none;
   }
   #responsiveContact p {
@@ -138,12 +140,14 @@ a {
   }
 
   #responsiveContact {
-    display: initial;
+    display: flex;
+    align-items: center;
+    padding: 1em 2.2em;
     position: sticky;
     bottom: 2.5em;
     width: 11em;
     height: 2.3em;
-    margin: 0 41%;
+    margin: auto;
     border: none;
   }
   #responsiveContact p {
@@ -213,6 +217,7 @@ a {
   border: 1px solid white;
   font-weight: 700;
   font-size: 18px;
+  background-color: #901c1c;
 }
 
 /* HEADER */
@@ -354,6 +359,8 @@ a {
 }
 .modalForm__body__title #photographerName {
   margin-top: 0.2em;
+  font-size: 40px;
+  margin: 0 0 1em 0.9em;
 }
 .modalForm__body form {
   display: flex;
@@ -388,8 +395,11 @@ a {
   .modalForm__body {
     width: 75%;
   }
+  .modalForm__body__title h1 {
+    font-size: 27px;
+  }
   .modalForm__body__title__close, .modalForm__body__title p {
-    font-size: 25px;
+    font-size: 20px;
   }
   .modalForm__body form .formData label {
     font-size: 14px;
@@ -521,10 +531,11 @@ a {
     margin-top: 0;
   }
   body main {
-    width: 90%;
+    justify-content: center;
   }
   body main .card {
     width: 100%;
+    margin: auto;
   }
   body main .card__content h3 {
     font-size: 1rem;
@@ -584,6 +595,7 @@ a {
 }
 .card-details__content .tag-style {
   background-color: unset;
+  justify-content: flex-start;
 }
 .card-details img {
   width: 200px;
@@ -667,6 +679,9 @@ a {
   .card-details .btn-contact p {
     font-size: 10px;
   }
+  .card-details__content {
+    margin-right: 2em;
+  }
   .card-details__content__tagline {
     margin: 0;
   }
@@ -686,11 +701,11 @@ a {
   .card-details__content .tag-style {
     background-color: unset;
     margin-top: 7px;
+    justify-content: flex-start;
   }
   .card-details img {
     width: 6.5em;
     height: 6.5em;
-    margin-left: -10%;
   }
 
   .sortBy {
