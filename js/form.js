@@ -24,7 +24,12 @@ function displayModalForm() {
   const close = document.querySelector(".modalForm__body__title__close");
   close.addEventListener("click", () => {
     modalForm.style.display = "none";
-    responsiveBtn.style.display = "flex";
+    if( screen.width >= 1440){
+      responsiveBtn.style.display = "none";
+    }
+    else {
+      responsiveBtn.style.display = "flex";
+    }
   });
 
    // Ferme avec la touche esc
